@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS1.기본 사용법 - DOM</title>
+    <style>
+        /* 제목 */
+        h1 {
+            text-align: center;
+        }
+
+        /* 드라마 소개 박스 */
+        .myo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            border: 5px solid hotpink;
+            width: 400px;
+            height: 300px;
+            border-radius: 50%;
+            /* obrder-radius의 단위는 퍼센트 */
+            text-align: center;
+            line-height: 150px;
+            font: bold 30px/150px Verdana;
+            /* 
+            font 한번에 쓰기
+            -> font: 스타일 두께 크기/줄간격 글자체;
+            -> font: 스두크/줄체; 
+            */
+            cursor: pointer;
+
+            /* background: url(./images/kimbs.jpg) no-repeat top/cover; */
+        }
+    </style>
+
+    <script>
+        /* 
+        [  자바스크립트의 정의  ]
+        고정적인 html 구조와 CSS로 디자인된 웹문서를 변경하기 위해 개발된 브라우저 전용 스크립트 언어.
+
+        [  JS 코딩구역  ]
+        1. 인터널 방식
+        - html의 script태그 안에 자바스크립트 언어를 기술하는 방식
+        2. 익스터널방식(external)
+        - JS 확장자를 가지는 외부 파일에 기술함
+        ex) <script src=""
+        3. 이벤트 속성 인라인 코딩
+        - html 이벤트 속성의 값으로 코딩
+        ex) <h1 onclick="JS코드"
+
+        [  JS의 역할  ]
+        1. html 변경
+        2. CSS 변경
+
+        [  JS의 화면출력  ]
+        1. document.write(내용)
+        - html 문서 화면에 출력(태그 사용)
+        2. console.log(내용)
+        - 브라우저 콘솔 모드에 내용 출력
+        3. alert(내용) 
+        - 팝업형식의 내용창을 출력하는 방식
+
+        [  JS 코드의 특징  ]
+        - JS 명령어 실행코드는 만나는 즉시 실행된다. 바로 실행하지 않으려면 함수가 필요하다!
+
+        [  함수 기본  ]
+        정의 
+        코드를 저장하는 메모리 공간
+        사용법
+        function(전달 변수){코드};
+        함수의 호출
+        함수명(); * 전달값은 소괄호안에보낸다.
+        */
+
+        /* // 출력1
+        document.write("<h1> 나는 프론트엔드 개발자다! </h1>"); // 따옴표는 문자 데이터, 아무것도 없으면 변수.
+        // 출력2
+        alert("그러냐?");
+        // 출력3
+        console.log("축하드려요~!"); */
+        
+        /* 
+        함수명 : 나야나
+        기능 : p태그 변경하기.
+        */
+
+        function iam (){
+            // 1. 호출 확인
+            console.log('함수야!')
+
+            document.getElementById('name').innerHTML = '<img src="./images/kim.png" alt="김비서가 왜 그럴까?">';
+            
+            // 변수는 재활용을 목적으로 특정 데이터나 요소등을 저장하는 저장공간이다.
+            var 목표 = document.getElementsByClassName('myo').item(0) 
+            
+            목표.style.fontSize = "50px";
+
+
+            목표.style.color = "lime";
+
+            // 트랜지션
+            목표.style.transition = "3s";
+
+            // 3-4. 가로 크기 변경.
+            목표.style.width = "550px";
+
+            // 3-5. 세로크기
+            목표.style.height = "400px";
+
+            // 3-6. 라인하이트
+            목표.style.lineHeight = "200px";
+
+            // 3-7. 글자 그림자
+            목표.style.textShadow = "2px 2px 2px #000";
+
+            // 3-8. 배경 이미지
+            목표.style.background = "url(./images/kimbs.jpg) no-repeat top/cover";
+
+            // 3-9. 회전
+            목표.style.transform = "translate(-50%, -50%) rotate(360deg)";
+
+            // 3-10. 위치 이동
+            목표.style.top = "50%";
+            목표.style.top = "50%";
+
+            // 대상선정 : h1
+            var 타이틀 = document.getElementsByTagName("h1")[0];
+
+            // 글자 변경하기
+            // innerTEXT = 변경 할 글자
+            타이틀.innerText = "JS의 세계에 오신것을 환영합니다!"
+
+            // 글자 크기 변경
+            타이틀.style.fontSize = "50px";
+
+            // 트랜지션
+            타이틀.style.transition = "3s ease-in-out 2s";
+
+            // 글자색
+            타이틀.style.color = "red";
+
+            // body 배경색 변경하기
+            var 바디 = document.body;
+            바디.style.backgroundColor = "pink";
+            바디.style.transition = '5s 5s';
+
+        } // 나야나 함수 //
+
+        // 8.4 화 -----------------------------------------------------------
+        // document 전체 문서를 담은 객체
+        
+        // 대상선정 : #name
+        // document.getElementById('name').innerHTML = '<img src="./images/kim.png" alt="김비서가 왜 그럴까?">';
+        // innerHTML은 태그, innerTEXT는 문자
+
+        // 스타일 변경하기
+        // css를 변경하려면 style을 부른다!
+
+        // Ctrl + Home 페이지 최상단
+        // Ctrl + End 페이지 최하단
+
+    </script>
+</head>
+
+<body>
+    <h1>JS 기본사용법 </h1>
+    <p class="myo" onclick=iam() ondbclick="document.getElementsByClassName('myo')[0].style.backgroundImage='url()'"
+        나는 매일생각한다<br>
+        도대체 <span id="name"> </span>
+    </p>
+    
+    <!-- <img src="./images/kim.png" alt="김비서가 왜 그럴까?"> -->
+</body>
+
+</html>
