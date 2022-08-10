@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> a </title>
+        <title> 온라인 피톤치드 </title>
         <style>
             .hereH{
                 text-align: center;
@@ -19,12 +19,12 @@
                 border-radius: 50px; /* %단위일 경우 원의 정도가 달라짐 */
                 text-align: center;
                 font: bold 30px/150px Verdana;
-                cursor:pointer;
+                cursor:pointer;        
             }
         </style>
         <script>
             function hereA1(){
-                document.querySelector('.hereD').innerHTML = '자연으로 떠나 볼까요? <br> <a href="https://unsplash.com/"> 여기를 클릭하세요 </a> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScy8aKz2Ecll6g2yhIxhIgrqDNZV8D8bwakpDs8lBhz-r6FK27JtaJvtkXO1AfV9ulChM&usqp=CAU">';
+                document.querySelector('.hereD').innerHTML = '자연으로 떠나 볼까요? <br> <a href="https://huyang.forest.go.kr/kfsweb/kfs/subIdx/Index.do?mn=HUYG"> 여기를 클릭하세요 </a> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScy8aKz2Ecll6g2yhIxhIgrqDNZV8D8bwakpDs8lBhz-r6FK27JtaJvtkXO1AfV9ulChM&usqp=CAU">';
                 let cssd = document.querySelector('.hereD');
                 cssd.style.fontSize = "35px";
                 cssd.style.transition = "2s";
@@ -43,12 +43,13 @@
                 cssH.innerText = "자연의 세계에 오신것을 환영합니다!"
                 cssH.style.fontSize = "50px";
                 cssH.style.transition = "2s ease-in-out 2s";
-                // 속서 시간 이징 지연 시간
+                // 속성 시간 이징 지연 시간
                 // 3초 작동 2초 기다림
                 
                 //---------------------------------------------
                 let cssB = document.body;
-                cssB.style.backgroundColor = "rgb(72, 152, 205)";
+                cssB.style.backgroundColor = "rgb(72, 215, 220)";
+                /* cssB.style.backgroundImage='url(https://cdn.pixabay.com/photo/2016/11/23/15/32/pedestrians-1853552_960_720.jpg)' */
                 cssB.style.transition = "5s 5s";
             } 
         </script>
@@ -56,7 +57,6 @@
     <body>
         <h1 class="hereH"> </h1>
         <div class="hereD" onclick="hereA1()"> 여기를 클릭하세요 </div>
-        <script src="a.js"> 
-        </script>
     </body>
 </html>
+
