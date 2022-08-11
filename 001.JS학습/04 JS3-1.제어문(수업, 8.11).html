@@ -27,26 +27,78 @@
 
             // 2-3. 출력 대상 : #jexp.
             var jexp = document.querySelector("#jexp"); 
+            
+            // 2-4. 칭찬스티커: #jshow
+            var jshow = document.querySelector("#jshow");
 
+            // 2-5-1. 숫자 여부 판별하기.
+            console.log("숫자가 아니니?", isNaN(score)); 
+            // isNaN(변수) : 숫자 판별 내장 함수(괄호안의 내용이나 변수가 아니니라고 질문).
+            if(isNaN(score)){  // 숫자가 아니면 출력
+                // 1. 메시지 출력하기
+                jexp.innerText = "숫자만 입력해 주세요";
+                console.log("여기 들어옴!");
+                
+                // 2. 글자색 초기화
+                jexp.style.color = "#000";
+                jshow.style.backgroundPosition = "322px 0";
+
+                // 4. 입력창 내용 지우기
+                jumsu.value = "";
+
+                // 5. 입력창에 포커스 주기(버튼을 클릭한 경우)
+                jumsu.focus();
+                // focus() : 입력창에 커서를 보내는 내장 함수.
+                
+                // 이 if문에 들어온 경우
+                // 여기서함수를 나가게 하려면?
+                // return 키워드 사용.
+                return;
+            }
+        
             // 3. 점수 환산하기.
             // 메시지 변수
             var msg;
+            // 글자색 변수
+            var fc;
+            // 배경 위치 변수
+            var bgp;
 
             if(score >= 90){
                 msg = "매우 잘함";
+                fc = "blue"
+                bgp = "0 0"
             } else if(score >= 80){
                 msg = "잘함";
+                fc = "green"
+                bgp = "-322px 0"
             } else if(score >= 70){
                 msg = "보통";
+                fc = "purple"
+                bgp = "-322px -322px"
             } else if(score >= 60){
                 msg = "노력 요함";
+                fc = "orange";
+                bgp = "0 -644px";
             } else{
                 msg = "재시험";
+                fc = "red";
+                bgp = "-644px -644px";
             }
-            console.log(`msg: ${msg}`);
-            
+            console.log(`msg: ${msg}, fc: ${fc}, bgp: ${bgp}`);
             // if문을 모두 따로 쓸 경우 아래와 같이 범위 지정을 모두 해야한다.
             // if(score < 90 %% score >= 80){} * else if를 쓰지 않을 경우
+         
+            // 4. 출력하기.
+            jexp.innerText = `평과 결과는 ${msg}`; // "평과 결과는" + msg;
+            // innerText는 선택 요소에 글자 출력.
+
+            // 5. 글자색 바꾸기.
+            jexp.style.color = fc;
+
+            // 6. 칭찬 스티커 보이기.
+            jshow.style.backgroundPosition = bgp;
+
 
 
 
@@ -265,7 +317,8 @@
     <h2>if문 연습</h2>
     <h3 id="jexp">평가출력</h3>
     <label for="jumsu">점수입력:</label>
-    <input type="text" id="jumsu" placeholder="점수를 입력하세요!" maxlength="3" />
+    <input type="text" id="jumsu" placeholder="점수를 입력하세요!" maxlength="3" 
+    onkeypress="if(event.keyCode === 13){jumsu()};"/> <!-- keyCode 13번은 엔터 --> 
     <button class="sbtn" onclick="jumsu()">평가하기</button>
     <!-- 
         onkeypress 이벤트 속성 
