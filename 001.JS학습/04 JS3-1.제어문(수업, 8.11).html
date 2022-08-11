@@ -31,6 +31,24 @@
             // 2-4. 칭찬스티커: #jshow
             var jshow = document.querySelector("#jshow");
 
+            // 숫자 여부 판별 및 숫자 범위 판별의 공통 코드 함수로 만들기
+            var comFn = function(){
+                // 2. 글자색 초기화
+                jexp.style.color = "#000";
+
+                // 3. 칭찬 스티커 위치 초기화
+                jshow.style.backgroundPosition = "322px 0"; // 322px 초기화.
+
+                // 4. 입력창 내용 지우기
+                jumsu.value = "";
+
+                // 5. 입력창에 포커스 주기(버튼을 클릭한 경우)
+                jumsu.focus();
+                // focus() : 입력창에 커서를 보내는 내장 함수.
+            } // comFn 함수
+            // 이름 없는 함수 function(){}를 변수에 할당하는 순간
+            // 할당하는 훈간 그 변수는 함수가 된다.
+
             // 2-5-1. 숫자 여부 판별하기.
             console.log("숫자가 아니니?", isNaN(score)); 
             // isNaN(변수) : 숫자 판별 내장 함수(괄호안의 내용이나 변수가 아니니라고 질문).
@@ -41,7 +59,9 @@
                 
                 // 2. 글자색 초기화
                 jexp.style.color = "#000";
-                jshow.style.backgroundPosition = "322px 0";
+
+                // 3. 칭찬 스티커 위치 초기화
+                jshow.style.backgroundPosition = "322px 0"; // 322px 초기화.
 
                 // 4. 입력창 내용 지우기
                 jumsu.value = "";
@@ -50,11 +70,24 @@
                 jumsu.focus();
                 // focus() : 입력창에 커서를 보내는 내장 함수.
                 
-                // 이 if문에 들어온 경우
-                // 여기서함수를 나가게 하려면?
+                // if문에서 함수를 나가게 하려면?
                 // return 키워드 사용.
                 return;
             }
+
+            // 2-5-2. 숫자 범위 판별하기.
+            // 입력값의 범위가 아닌것은 0미만 100초과.
+            else if(score < 0 || score > 100){
+                // 1. 메시지 찍기
+                jexp.innerText = '0이상 100이하의 숫자만 입력하세요!';
+
+                // 2. 각종 초기화 기능 함수 호출.
+                comFn();
+
+                // if문에서 함수를 나가게 하려면?
+                // return 키워드 사용.
+                return;
+            } // else if
         
             // 3. 점수 환산하기.
             // 메시지 변수
