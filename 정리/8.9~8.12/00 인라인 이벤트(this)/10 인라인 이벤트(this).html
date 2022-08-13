@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 인라인 이벤트(this) </title>
+    </head>
+    <body>
+        <button type="button" class="sbtn" onclick="jumsu(this)"> 평가하기 </button>
+        <!-- jumsu(this)에서 사용된 this는 button 태그를 지칭한다.
+             this는 this를 포함하는 함수나 메소드가 소속되어있는 태그나 객체를 의미 한다
+            -->
+
+        <script>
+            // 1. 이벤트 핸들러 방식
+            /* let a = document.querySelector(".sbtn");
+            function b(){
+               console.log(a);
+            }           
+            a.onclick = b; */
+
+            // 2. 인라인 이벤트 방식(this 사용)
+            function jumsu(A){ // A는 this로 부터 전달 받은 내용을 저장하는 변수(A 말고 아무거나 와도됨).
+                console.log(A);
+            }
+        </script>
+    </body>
+</html>
+
+
