@@ -14,17 +14,19 @@
         </style>
     </head>
     <body>
-        <input type="text" placeholder="문자나 숫자를 입력하세요" onkeydown="func()">
+        <input type="text" placeholder="문자나 숫자를 입력하세요"> <!-- onkeydown="func()" -->
         
         <script>
-            /* let a = document.querySelector("input");
+            // 이벤트 핸들러 방식
+            let a = document.querySelector("input");
             a.addEventListener('keydown', function(evnet){
                 console.log(evnet.keyCode);
-            }) */
+            })
 
-            function func(){
+            // 이벤트 속성방식
+            /* function func(){
                 console.log(event.keyCode);        
-            }
+            } */
         </script>
     </body>
 </html>
