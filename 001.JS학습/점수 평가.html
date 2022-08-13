@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #jshow{
+                position: absolute;
+                top: -19;
+                left: 133px;
+                width: 322px;
+                height: 322px;
+                background: url(./images/ifshow.jpg) no-repeat;
+                background-position: 322px 0;
+                transform: scale(0.3);
+                transition: all 0.4s ease-out;
+            }
+            .ir{
+                display: block;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> 점수 평가 </h1>
+        <h2 id="jexp"> 평가 결과 </h2>
+        <label for="jumsu"> 점수 입력 : </label>
+        <input type="text" id="jumsu" placeholder="점수를 입력하세요!" maxlength="3" onkeypress="if(event.keyCode === 13){jumsu()};">
+        <button class="btn" onclick="jumsu()"> 입력 완료 </button>
+
+        <div id="jshow">
+            <span class="ir"> 칭찬 스티커 </span>
+        </div>
+
+        <script>
+            function jumsu(){
+                let jumsu = document.getElementById("jumsu");
+                let score = jumsu.value;
+                console.log(`입력된 점수 : ${score}`)
+
+                let jexp = document.querySelector("#jexp");
+                let jshow = document.querySelector("#jshow")
+
+                let comFn = function(){
+                    jexp.style.color = "#000"
+                    jshow.style.backgroundPosition = "322px 0"
+                    jumsu.value = "";
+                    jumsu.focus(); // 입력창에 커서를 보내는 내장 함수.
+                }
+
+                if(isNaN(score)){ // isNaN()괄호 안의 내용이 숫자가 아니면 참, 맞으면 거짓 
+                    jexp.innerText = "숫자를 입력하세요"
+                    jexp.style.color = "#000" // 글자색 초기화
+                    jshow.style.backgroundPosition = "322px 0";
+                    jumsu.value = "";
+                    jumsu.focus();
+                    return;
+                } else if(score < 0 || score > 100){
+                    jexp.innerText = '0이상 100이하의 숫자만 입력하세요'
+                    comFn();
+                    return;
+                }
+
+                let msg;
+                let fc;
+                let bgp;
+                if(score >= 90){
+                    msg = "매우 잘함"
+                    fc = "breen"
+                    bgp = "0 0"
+                } else if(score >= 80){
+                    msg = "잘함"
+                    fc = "green"
+                    bgp = "-322px 0"
+                } else if(score >= 70){
+                    msg = "보통"
+                    fc = "purple"
+                    bgp = "-322px -322px"
+                } else if(score >= 60){
+                    msg = "노력 요함"
+                    fc = "orange"
+                    bgp = "0 -644px"
+                } else{
+                    msg = "재시험"
+                    fc = "red"
+                    bgp = "-644px -644px"
+                }
+                console.log(`msg : ${msg}, fc : ${fc}, bgp : ${bgp}`);
+
+                jexp.innerText = `평가 결과는 ${msg}`;
+                jexp.style.color = fc;
+                jshow.style.backgroundPosition = bgp;
+            }
+        </script>
+        
+    </body>
+</html>
+
+<!-- 
+
+1.
+<label> 태그, maxlength 속성
+event.KeyCode 13.
+
+2.
+css 속성
+position: absolut;
+backgrount: no-repeat;
+transition: all 0.4s ease-out;
+overflow: hidden;
+
+ -->
