@@ -5,18 +5,19 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title> 점수 평가 </title>
         <style>
             #jshow{
                 position: absolute;
-                top: -19;
-                left: 133px;
+                top: -105px;
+                left: 135px;
                 width: 322px;
                 height: 322px;
                 background: url(./images/ifshow.jpg) no-repeat;
                 background-position: 322px 0;
                 transform: scale(0.3);
                 transition: all 0.4s ease-out;
+                /* border: 2px solid black; */
             }
             .ir{
                 display: block;
@@ -47,7 +48,7 @@
                 let jshow = document.querySelector("#jshow")
 
                 let comFn = function(){
-                    jexp.style.color = "#000"
+                    jexp.style.color = "red"
                     jshow.style.backgroundPosition = "322px 0"
                     jumsu.value = "";
                     jumsu.focus(); // 입력창에 커서를 보내는 내장 함수.
@@ -55,7 +56,7 @@
 
                 if(isNaN(score)){ // isNaN()괄호 안의 내용이 숫자가 아니면 참, 맞으면 거짓 
                     jexp.innerText = "숫자를 입력하세요"
-                    jexp.style.color = "#000" // 글자색 초기화
+                    jexp.style.color = "red" // 글자색 초기화
                     jshow.style.backgroundPosition = "322px 0";
                     jumsu.value = "";
                     jumsu.focus();
@@ -71,7 +72,7 @@
                 let bgp;
                 if(score >= 90){
                     msg = "매우 잘함"
-                    fc = "breen"
+                    fc = "blue"
                     bgp = "0 0"
                 } else if(score >= 80){
                     msg = "잘함"
@@ -92,7 +93,7 @@
                 }
                 console.log(`msg : ${msg}, fc : ${fc}, bgp : ${bgp}`);
 
-                jexp.innerText = `평가 결과는 ${msg}`;
+                jexp.innerText = msg; /* `평가 결과 : ${msg}` */
                 jexp.style.color = fc;
                 jshow.style.backgroundPosition = bgp;
             }
@@ -103,15 +104,36 @@
 
 <!-- 
 
-1.
-<label> 태그, maxlength 속성
-event.KeyCode 13.
+1. maxlength 속성
+maxlength : 글자수 지정 속성
 
-2.
-css 속성
-position: absolut;
-backgrount: no-repeat;
-transition: all 0.4s ease-out;
-overflow: hidden;
+2. isNaN() 함수(내장 함수)
+isNaN()괄호 안의 내용이 숫자가 아니면 참, 맞으면 거짓 
+
+3. label 태그
+for 속성과 같이 사용.
+for 속성값에는 이동하고자 하는 태그의 id값으로 입력한다.
+웹페이지에서 label 태그 내용 클릭시 for의 속성값과 동일한 id값을 가지고 있는 태그로 이동.
+
+input, button, textarea, select 태그들과 같이 사용될 수 있다
+
+4. 이벤트 객체와 keyCode
+- 이벤트 객체
+이벤트 발생시 추가적인 기능과 정보를 제공하기 위해 이벤트 핸들러에 자동으로 전달되는 데이터(이벤트 핸들러 : 이벤트가 발생되면 실행될 코드 블럭).
+
+이벤트 핸들러에 사용된 함수의 매개 변수를 통해 이벤트 객체가 전달된다(매개 변수의 명칭은 자유롭게 사용할 수 있다). * 이벤트 속성으로 사용할 경우 매개 변수를 생략해도 된다.
+
+- keyCode
+컴퓨터 키보드에서 각각의 키에 부여되어 있는 고유의 번호(어떤 키가 눌리고 해제되었는지를 컴퓨터에 전달하기 위해 사용된다).
+
+- keyCode의 종류
+<Enter> 13
+<Backspace> 8
+<Space> 32
+<1> 49
+<a> 65
+등등이 있다(keyCode 사진 참고).
+
+5.
 
  -->
