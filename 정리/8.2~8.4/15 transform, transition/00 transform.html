@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                padding: 0; margin: 0; background-color: lightgray;
+            }
+            .outline, .box{
+                width: 60px; height: 60px;
+            }
+            .outline{
+                border: 3px solid yellow;
+                margin: 0 auto;  /* margin에서 0 auto의 의미는? */
+                margin-top: 20px;
+            }
+            .box{
+                background-color: blue;
+            }
+            .box1{
+                transform: translateX(20px);
+            }
+            .box2{
+                transform: scaleX(2);
+            }
+            .box3{ 
+                transform: rotatex(45deg);
+            }
+            .outline-box{
+                perspective: 50px;
+            }
+            .box4{
+                transform: skew(30deg);
+            }
+
+        </style>
+    
+    </head>
+    <body>
+        <div class="outline">
+            <div class="box box1"></div> <!-- class명 띄어쓰기 가능? -->
+        </div>
+
+        <div class="outline">
+            <div class="box box2"></div>
+        </div>
+
+        <div class="outline outline-box">
+            <div class="box box3"></div>
+        </div>
+
+        <div class="outline">
+            <div class="box box4"></div>
+        </div>
+        
+    </body>
+</html>
+
+<!-- 
+
+1.
+transform
+HTML 태그를 이동, 확대.축소, 각도 만큼 회전, 각도 만큼 왜곡 등의 효과를 주는 속성(transform의 속성값으로 함수를 사용한다).
+transform: translate(); or scale(); or rotate(); or skew(); 와 같은 형태로 사용한다.
+
+2.
+translate(tx, ty);
+지정한 크기만큼 x축, y축으로 이동
+translateX(tx)
+지정한 크기만큼 x축으로 이동
+translateY(ty)
+지정한 크기만큼 y축으로 이동
+
+scale(숫자1, 숫자2)
+지정한 크기 만큼 x축과 y축으로 확대.축소
+scaleX(숫자)
+지정한 크기 만큼 x축으로 확대.축소 
+scaleY(숫자)
+지정한 크기 만큼 y축으로 확대.축소
+
+rotate(각도=숫자deg)
+지정한 각도만큼 회전(+는 시계방향, -는 시계반대방향)
+rotateX(각도)
+x축을 기준으로 회전 지저한 각도만큼 회전(입체감 있게 표현하려면 perspective 속성을 부모 태그 속성에 사용해야 한다).
+rotateY(각도)
+y축을 기준으로 회전 지저한 각도만큼 회전(입체감 있게 표현하려면 perspective 속성을 부모 태그 속성에 사용해야 한다).
+rotateZ(각도)
+z축을 기준으로 회전 지저한 각도만큼 회전(입체감 있게 표현하려면 perspective 속성을 부모 태그 속성에 사용해야 한다).
+
+skew(각도1, 각도2)
+지정한 각도만큼 x축과 y축으로 왜곡
+skewX(각도)
+지정한 각도만큼 x축으로 왜곡
+skewY(각도)
+지정한 각도만큼 y축으로 왜곡
+
+ -->
+
+ 
