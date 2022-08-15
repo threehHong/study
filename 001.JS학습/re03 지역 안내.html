@@ -271,14 +271,15 @@
                     default: info1 = "esc";
                 }
                 
-                // 8.  
-                if(info1 === "esc"){
+                // 8. localName의 데이터와 기존 데이터와의 일치 여부 파악 후 info1 변수에 출력할 내용 저장.
+                if(info1 === "esc"){ // default: info ="esc";이므로 localName과 일치하는 데이터가 없으면 info1에 esc가 저장되고
+                                     // info01 === "esc" 참일 경우 info1 = "등록되지 않은 지역입니다";가 실행된다. 
                     info1 = "등록되지 않은 지역입니다";
                 } else{
                     info1 = localName;
                 } // info1 = `${localName}의 지역번호는 ${info1}입니다`
 
-                // 9. h1(.info) 태그에 localName; 저장하여 출력.
+                // 9. h1(.info) 태그에 등록되지 않은 지엽입니다 or localName 출력.
                 info.innerText = info1;
             }
         </script>
