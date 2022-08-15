@@ -10,26 +10,37 @@
             .info, label{
                 margin-left: 10px;
             }
-            .img{
-                width: 1000px;
-                height: 556px;
-                transition: all 3s ease-out;
-                /* border: 2px solid black; */
-                /* background-image: url("./images2/seoul.jpg"); */
+            .im{
+                height: 520px;
+                border: 2px solid black;
                 margin-top: 15px;
-                margin-left: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .img{
+                border: 2px solid green;
+                width: 500px;
+                height: 500px;
+                transition: all 3s ease-out;
+            }
+            .ex{
+                font: 20px;
+                height: 100px;
+                border: 2px solid black;
+                margin-top: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .exp{
-                font: 20px;
-                width: 900px;
-                height: 120px;
-                /* border: 2px solid black; */
+                width: 200px;
+                height: 80px;
+                border: 2px solid green;
                 line-height: 25px;
                 font-size: 18px;
-                transition: all 3s ease-out;
                 text-align: center;
-                margin-top: 15px;
-                margin-left: 10px
+                /* transition: all 3s ease-out; */
             }
         </style>
     </head>
@@ -39,8 +50,12 @@
         <input type="text" class="local" maxlength="3" onkeypress="if(event.keyCode === 13){local()}">
         <button class="btn" onclick="local()"> 안내 </button>
         
-        <div class="img"> </div>
-        <div class="exp"> </div>
+        <div class="im">
+            <div class="img"> </div>
+        </div>
+        <div class="ex">
+            <div class="exp"> </div>
+        </div>
     
         <script>
             function local(){
@@ -68,7 +83,9 @@
                     exp.innerText = "대한민국의 수도인 서울을 지방자치단체인 특별시로 부르는 명칭이다. 한반도 중앙에 있으며, 한강을 사이에 두고 남북으로 펼쳐져 있다. 북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 원지동, 서쪽 끝은 강서구 오곡동이다. 시청은 중구 을지로1가(태평로1가 31)에 있다."; 
                     img.style.transform = "scale(0.8)"; 
                     exp.style.trnssform = "scale(0.8)";
-                    exp.style.transform = "translateX(20px)"
+                    img.style.transform = "translateX(20px)"
+                    img.style.width = "1000px";
+                    img.style.height = "566px";
                     break;
 
                     case "경기": info1 = "031"; img.style.backgroundImage ="url('./images2/경기.jpg')"; 
