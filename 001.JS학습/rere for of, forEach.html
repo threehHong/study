@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> for of </title>
+    </head>
+    <body>
+        <script>
+            // for of 
+            let arr = ['바나나', '사과', '귤'];
+            for(let a of arr){
+                console.log(a);
+            } console.log("\n"); 
+
+            // forEach()
+            let user = ['Mike', 'Tom', 'Jane'];
+            user.forEach((item, index) => {
+                console.log(`${index}. ${item}`);
+            }); // console.log(index, item); 이렇게도 나타낼 수 있다(단 위와 같이 점을 찍을 수 없다)
+
+            // item은 배열의 원소.
+            // 매개변수2는 배열의 각 원소에 부여된 번호.
+            // arr은 배열명.
+
+
+
+            // 코딩앙마 for of, for in 문법 설명 찾아보기 
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1. for of
+let 배열명 = ['원소1', '원소2', ...];
+for(let 변수명 of 배열명){
+    console.log(변수명);
+};
+배열과 함께 사용되는 반복문.
+배열의 원소의 개수 만큼 자동으로 반복된다.
+각 순서에 맞는 배열의 원소가 변수에 복사된다.
+
+2. forEach()
+let 배열명 = ['원소1', '원소2', ...];
+배열명.forEach((매개변수1, 매개변수2, 매개변수3)) => {
+    
+})
+매개변수1은 배열의 각 원소.
+매개변수2는 배열의 각 원소에 부여된 번호.
+매개변수3은 배열명.
+
+ -->
