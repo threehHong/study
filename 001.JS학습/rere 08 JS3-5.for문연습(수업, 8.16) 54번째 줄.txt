@@ -13,13 +13,10 @@ JS
 
 - 09 JS4-1.배열과객체(수업, 8.16), new Array(68번째 줄), join 구분자(154번째 줄), new Object(198번째 줄)
 
-- 12 JS4-2.배열메서드(수업, 8.18), psuh, pop, shift, unshift, splice.
+- 12 JS4-2.배열메서드(수업, 8.18), 배열 메소드 - psuh, pop, shift, unshift, splice.
 
 - 13 JS3-6.for_of문(수업, 8.18), for of, forEach(현업에서 많이 사용한다고 함). 유튜브 - forEach 배열 방법 | JavaScript 튜토리얼
 - 14 JS3-7.for_in문(수업, 8.18), for in.
 
-- 콜백함수 개념 탐구 및 정리(forEach를 이해하기 위해서 필요한 개념)
-
-
-- 노드 리스트 = 컬렉션(쿼리셀렉터 할 경우 생성).
+- 노드 리스트 = 컬렉션(쿼리셀렉터 할 경우 생성) 탐구 및 정리.
 
