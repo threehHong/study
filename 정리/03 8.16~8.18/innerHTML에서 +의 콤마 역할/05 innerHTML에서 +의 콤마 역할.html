@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> innerHTML에서 +의 콤마 역할 </title>
+    </head>
+    
+    <body>
+       <ul class="for"></ul>
+
+       <h1 class="a1"> </h1>
+
+       <script>
+        //1.
+        let fruits = ["apple", "orange", "cherry"];
+
+        for(let i = 0; i <fruits.length; i++){
+            document.querySelector('.for').innerHTML += `<li>${fruits[i]}</li>`;
+        } 
+        // document.querySelector('.for').innerHTML += `<li>${fruits[i]}</li>`; 아래 내용과 같음.
+        // document.querySelector('.for').innerHTML = `<li>${fruits[0]}</li>` + `<li>${fruits[1]}</li>` + `<li>${fruits[2]}</li>`
+        //  +구분자가 없으면 오류가 난다, +가 콤마와 같이 구분자 역할을 한다 생각하기.
+
+        //2.
+        let arr1 = new Array("a", "b", "c");
+        let txt = document.querySelector('.a1');
+        txt.innerHTML = `${arr1[0]}` + `${arr1[1]}` + `${arr1[2]}`
+        // +구분자가 없으면 오류가 난다, +가 콤마와 같이 구분자 역할을 한다 생각하기.
+
+        ////////////////////////// 원리 추후 탐구 및 정리 //////////////////////////
+        </script>  
+    </body>
+</html>
+
