@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            ul li{
+                color: blue; 
+            }
+            .cl>li{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li> HTML </li>
+            <li> CSS </li> 
+            <li> JavaScript </li>
+        </ul>
+
+        <ol class="cl">
+            <li> HTML  </li>
+            <li> CSS </li>
+            <ol>
+                <li> C </li>
+                <li> C++ </li>
+            </ol>
+            <li> JavaScript </li>
+        </ol> 
+    </body>
+</html>
+
+<!-- 
+
+1.
+부모 태그 - 하위 태그를 포함하는 태그
+자식 태그 - 상위 태그에 포함되는 태그
+
+2. 
+A B{} (선택자 사이에 공백이 있을경우).
+상위 태그 A에 포함된 하위 태그 B에 CSS 속성 적용. 
+
+3.
+A>B{} (선택자 사이에 부등호가 있을경우).
+상위 태그 A에 포함된 바로 밑에 있는 하위태그 B에만 CSS 속성 적용(직계자손에게만 적용).
+
+ -->
+
