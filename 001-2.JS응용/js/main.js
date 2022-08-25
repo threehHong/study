@@ -82,6 +82,10 @@ function loadFn() {
             // left가 0이될 때 트랜지션 지우기!
             slide.style.transition = 'none';
         }, 400); // 400은 0.4초 후.
+
+        // 블릿 변경 함수 호출(1전달!)
+        chgIndic(1);
+
     };
     
     // 3-2 왼쪽 버튼
@@ -118,15 +122,66 @@ function loadFn() {
             slide.style.left = '0';
             //  트랜지션 설정
             slide.style.transition = 'left .4s ease-in-out';
+            // left값을 0으로 변경
+            slide.style.left = '0';
+            // 트랜지션 설정
+            slide.style.transition = 'left .4s ease-in-out';
         }, 10);
-        // left값을 0으로 변경
-        slide.style.left = '0';
-        // 트랜지션 설정
-        slide.style.transition = 'left .4s ease-in-out';
+
+        // 블릿 변경 함수 호출(0전달!)
+        chgIndic(0);
 
         // 기능구현 3단계
         // left값을 0으
     };
+
+    // 블릿 요소 변수 설정
+    let indic = document.querySelectorAll('.indic li');
+
+    // 블릿에서 슬라이드 순번을 읽을 수 있게
+    // 각 슬라이드 li에 고유순번 속성 넣기!
+    // 넣는 이유 : 슬라이드가 매번 순번이 바뀜
+    // 넣는 방법은 처음 로딩 후 바로 li 순번을 넣는다.
+    // forEach문 사용!!
+    let sld = slide.querySelectorAll('li');
+    sld.forEach((ele,idx)=>{ // ele-각 요소, idx-순번.
+        ele.setAttribute('data-seq', idx);
+        // 속성명을 'data-'로 시작하면 내가 만든 속성명을 사용할 수 있다.
+        // w3c에서 지정함.
+        // setAttribute(속성명, 속성값) -> 속성 셋팅 메서드.
+    })
+
+    // 블릿의 표시를 해당 슬라이드 순번과 같은 블릿에 class='on'을 주면 회색 이미지로 보임!
+    // 나머지는 모두 on을 뺴야함!
+    function chgIndic(num){ 
+        // num - 읽을 슬아이드 순번
+        // 오른쪽버튼은 1, 왼쪽버튼은 0을 전달!
+        
+        // 1. 호출확인!
+        console.log('블릿:', num); 
+
+        // 2. 슬라이드 속성 'data-seq'값 읽어오기
+        let seq = slide.querySelectorAll('li')[num].getAttribute('data-seq');
+
+        // 값 확인 
+        console.log('data-seq:', seq); 
+        
+        // 3. 블릿 클래스 초기화
+        indic.forEach((ele)=>{
+            ele.classList.remove('on');         
+        });
+
+        // 4. 슬라이드 순번(data-seq)과 같은 순번의 블릿만 li에 clss="on" 넣기
+        indic[seq].classList.add('on'); 
+
+        /* 
+            [  JS 클래스 컨트로 메서드  ]
+            classList 객체
+            1) add(클래스명) - 클래스 추가
+            2) remove(클래스명) - 클래스 제거
+            3) toggle(클래스명) - 클래스 추가/제거
+        */
+    }
 
 } //////////////// loadFn 함수 ///////////////
 /////////////////////////////////////////////
