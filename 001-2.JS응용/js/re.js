@@ -20,8 +20,8 @@ function loadFn(){
         setTimeout(()=>{
             // 맨 앞 요소 맨뒤 이동
             slide.appendChild(slide.querySelectorAll('li')[0]);
-
+        
+          
         }, 400)
-
     }
 }
