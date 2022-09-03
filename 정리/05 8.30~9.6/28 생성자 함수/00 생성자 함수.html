@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 생성자 함수 </title>
+    </head>
+    <body>
+        <script>
+            function Item(title, price){
+                // this = {} 
+                // new 키워드를 붙여 함수 실행시 생성되는 코드(에디터에는 보이지 않는다)
+                
+                this.title = title ;
+                this.price = price;
+                this.showPrice = function(){
+                    console.log(`가격은 ${price}원 입니다.`);
+                }
+
+                // return this - 생략된 코드
+                // new 키워드를 붙여 함수 실행시 생성되는 코드(에디터에는 보이지 않는다)
+            }
+            
+            let item1 = new Item('인형', 3000);
+            let item2 = new Item('가방', 4000);
+            let item3 = new Item('지갑', 9000);
+            // new 키워드를 붙여 Item함수를 호출하면 위의 13, 22번째 코드가 실행되어 새로운 내용의 객체가 완성된다
+            // 이것이 새로운 변수에 저장되어 새로운 객체가 완성되는 것.
+
+            console.log(item1, item2, item3); console.log('\n');
+
+            item1.showPrice();
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1.
+생성자 함수
+함수의 특정 형태를 가지고 객체를 생성하는 함수(객체를 적은 코드로 작성할 수 있다).
+
+2.
+생성자 함수 규칙
+함수명의 첫 글자를 대문자로 한다
+
+객체명은 this 키워드를 사용한다.
+
+new키워드로 생성자 함수를 호출하고 변수에 할당한다
+
+3.
+생성자 함수의 원리
+new 키워드를 붙여 함수를 실행하면 위 13, 22번째 코드와 같이 this 객체와 리턴이 생성되어 함수가 실행된다(에디터에는 보이지 않는다) -> 
+new로 호출한 함수의 매개변수 값이 함수 내부 객체의 속성에 저장된다 -> 
+new로 호출한 함수를 변수a에 저장한다 -> 
+변수에 저장된 값은 객체이고 이 객체는 변수 a에 저장했으므로 a라는 명칭의 객체로 사용할 수 있다. 
+
+ -->
+
+
+
+
