@@ -20,7 +20,30 @@
             let txt2 = document.querySelector('.b');
             txt2.innerHTML = arr.join();
             
-        
+            // indexOf(배열 요소 or 문자나 문자열, 시작위치) 
+            // 배열 요소 or 문자나 문자열의 순서를 찾아 반환하는 메소드(배열 요소나 문자가 없을 경우 -1을 반환, 왼쪽부터 오른쪽 방향으로 찾아 나감).
+            let arr2 = [1, 2, 3, 4, 5, 1, 2, 3];
+            console.log(arr2.indexOf(3), arr2.indexOf(4), arr2.indexOf(6));
+            console.log(arr2.indexOf(2, 3)); console.log("\n");
+            // 3번째 이후 부터 2를 찾아 순서를 반환.
+
+            let str = "Hello, I'm Tom"
+            console.log(str.indexOf("m"));
+            console.log(str.indexOf("m", '10')); console.log("\n");
+            // 10번째 이후 부터 m을 찾아 순서를 반환(시작위치는 반드시 숫자여야 한다)
+
+            // lastIndexOf(배열 요소 or 문자나 문자열, 시작위치)
+            // 오른쪽부터 왼쪽 방향으로 찾아 나감.
+            console.log(arr2.lastIndexOf(3));
+
+            // split()
+            // 문자열을 배열로 만들어주는 메소드(괄호의 쌍따옴표 안에 아무 것도 없을 경우 글자 하나하나 배열로 나눠주고(공백 포함), 쉼표(,)) 일 경우 쉼표 단위로 배열로 나눠준다.
+            let users = "Mike, Jane, Tom, Tony";
+            let result = users.split(",");
+            console.log(result);
+            result = users.split("");
+            console.log(result);
+             
         </script>
     </body>
 </html>
