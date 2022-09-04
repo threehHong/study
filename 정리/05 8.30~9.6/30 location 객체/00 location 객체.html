@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> location 객체 </title>
+        <style>
+            .a{
+                font-weight: bold;
+                margin: 20px;    
+            }
+            .a:hover{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="a"> 생활코딩 location 객체 강의 </p>
+
+        <script>
+            let a = document.querySelector('.a');
+            a.addEventListener('click', function(){
+                location.href = 'https://youtu.be/EBhtT9TGtqY'
+            })
+
+            console.log(location); console.log("\n\n");
+            console.log(location.toString()); console.log("\n\n");
+            console.log(location.href);
+
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1.
+location
+현재 브라우저에 열려있는 html 문서의 url에 관련된 정보를 알려주는 객체.
+
+2.
+location.toString(), location.href
+현재 브라우저에 열려있는 html 문서의 url 주소를 알려주는 명령어(location.href를 주로 사용함)
+
+location.reload()
+새로 고침 명령어
+
+3.
+location.href = "url주소"
+쌍따옴표 안의 url 주소로 이동하는 명령어
+
+4.
+location.href - http://opentutorials.org:80/module/1?id=11#hash
+현재 브라우저에 열려있는 문서의 url 주소
+
+location.protocol - http
+프로토콜 http or https 컴퓨터 간의 통신 규약
+
+location.host - opentutorials.org
+도메인 이름(DNS 서버를 통해 IP주소로 변환됨), 서버의 주소
+
+location.port - 80
+컴퓨터에 설치되어 있는 여러 프로그램들의 식별 번호
+
+location.pathname - /module/1
+서버에 저장된 파일의 경로
+
+location.search - ?id=11
+파일에 전달할 정보
+
+location.hash - #hash
+
+ -->
+
