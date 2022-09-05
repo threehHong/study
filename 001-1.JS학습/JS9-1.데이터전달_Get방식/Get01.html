@@ -88,6 +88,8 @@
                 let gnb = document.querySelectorAll("#gnb a");
                 // console.log("개수:",gnb.length);
 
+                console.log(escape("레드샵"));
+
                 // 각 a요소 for of 로 click셋팅하기
                 for(let x of gnb){
                     x.onclick = ()=>{
@@ -100,7 +102,7 @@
                         // location.href = 이동할 페이지 주소
                         // 자기자신창에서 변경된다!
                         location.href = 
-                        "Get02.html?shop="+escape(txt);
+                        "Get02.html?shop=" + escape(txt);
                         // Get02.html?키=값
                         // -> Get방식으로 테이터 넘기기
                         // 2byte문자인 한글은 url로 보낼때
