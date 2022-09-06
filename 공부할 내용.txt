@@ -43,3 +43,14 @@ cat.json (제이슨 파일)
 linksys.js
 category.css
 linksys.js
+폰티스토 fontisto
+https://www.vogue.co.kr/category/fashion/
+
+추후 탐구 및 정리
+member.js - 밸리데이션
+
+전시간에 공부한 내용
+전시간에는 스크롤 움짐임에 따라 사진 생성되는 것 했음.
+
+용어
+리터럴
