@@ -43,6 +43,7 @@ cat.json (제이슨 파일)
 linksys.js
 category.css
 linksys.js
+Get01.html
 폰티스토 fontisto
 https://www.vogue.co.kr/category/fashion/
 
