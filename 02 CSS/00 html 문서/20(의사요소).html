@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset-UTF8>
+        <title> 의사요소 </title>
+        <style>
+            p::first-line{color: purple;}
+            p::first-letter{color: red;}
+            li::marker{
+                color: blue;
+                font-size: 30px;
+            }
+            input::placeholder{
+                color: sienna;
+            }
+            p::before{content:"앞에다 추가한 텍스트";}
+            p::after{
+                content:"뒤에다 추가한 텍스트"; 
+                color: seagreen;}
+        </style>
+    </head>
+    <body>
+        <p> 
+            <br> <br>
+            first-line, first-letter <br> <br>
+            first-line, first-letter <br> <br>
+        </p>
+        <ul>
+            <li> 국어</li>
+            <li> 수학 </li>
+        </ul>
+
+        <input type="text" placeholder="문자를 입력하세요">
+    </body>
+</html>
+
+<!-- 
+
+1.
+의사요소(pseudo-elements)
+선택자에 추가하는 키워드
+선택한 태그의 특정 부분에 대한 스타일을 정의할 수 있다. 
+* HTML 문서가 포함하지 않는 개체(목록 구분점, 플레이스홀더 등)를 선택할
+  수 있어 유용하다.
+
+선택자::의사요소{
+    속성명: 속성값;
+}
+li::first-letter{
+    font-size: 20px;
+}
+li 태그 내용의 첫 번째 글자만 크기를 20px로 하겠다(기본값은 16px)
+
+2.
+의사요소의 종류
+first-line : 블록 레벨 요소의 첫 번째 줄에 스타일을 적용.
+first-letter : 태그 내용의 첫 번째 글자만 스타일을 적용
+marker : 목록 기호의 스타일을 적용(ul태그의 li속성에 적용).
+placeholder : 입력 태그의 플레이스홀더에 스타일을 적용.
+before : 태그의 앞에 의사 요소를 생성 및 추가.
+after : 태그의 뒤에 의사 요소를 생성 및 추가
+
+3.
+placeholder : 빠져 있는 것을 대신하는 기호나 텍스트.
+
+-->

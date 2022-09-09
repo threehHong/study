@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <head>
+            <meta charset="UTF-8">
+            <title> 박스모델2 </title>
+            <style>
+                div{
+                    padding: 10px;
+                    border: 5px solid red;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    margin-bottom: 30px;
+                    margin-left: 40px;
+                }
+                h3{
+                    padding: 10px;
+                    border: 5px solid blue;
+                    margin: 10px 20px 30px 40px;
+                }
+            </style> 
+        </head>
+    
+        <body>
+            <div> 
+               margin 속성의 상하좌우 여백을 각각 정의하기.
+            </div>
+            
+            <h3>
+               margin 속성의 상하좌우 여백을 한 번에 정의하기.
+            </h3>
+        </body>
+    </body> 
+</html>
+
+<!-- 
+1.
+여백은 상하좌우 네 면의 영역이 존재한다
+상하좌우 개별 속성을 사용하면 여백 두께를 개별 정의할 수 있다
+
+2.
+padding or margin 속성의 상하좌우 여백을 각각 정의하기.
+padding or margin-top
+padding or margin-right
+padding or margin-bottom
+padding or margin-left
+
+2.
+padding과 margin 속성의 상하좌우 여백을 한 번에 정의하기.
+padding or margin: 10px 하나 지정할 경우 상하좌우 전체 10px로 지정
+padding or margin: 10px 20px 두개 지정할 경우 상하 10px, 좌우 20px로 지정
+padding or margin: 10px 20px 30px 세개로 지정할 경우 top 10px, 좌우 20px, bottom 30px.\
+padding or margin: 10px 20px 30px 40px 네개로 지정할 경우 top 10px, right 20px; bottom 30px, left 40px (시계 방향)
+-->
+

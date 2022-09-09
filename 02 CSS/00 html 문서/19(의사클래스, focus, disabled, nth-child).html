@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 의사 클래스(가상클래스) 2, focus, disabled, nth-child() </title>
+        <style>
+            [id="a"]:focus{
+                background-color: burlywood;
+                color: white;
+            }
+            [id="b"]:disabled{
+                height: 300px;
+            }
+
+            #c{
+                display: flex;
+                justify-content: space-between;
+            }
+            .box{
+                width: 50px; height: 50px;
+                background-color: blue;
+                color: white;
+            }
+            .box:nth-child(2){
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="a" type="text" placeholder="내용을 입력하세요"> <br> <br>
+        <input id="b" type="text" placeholder="내용을 입력하세요" disabled>
+        <div id="c">
+            <div class="box"> 1번 </div> <div class="box"> 2번 </div>
+            <div class="box"> 3번 </div> <div class="box"> 4번 </div>
+            <div class="box"> 5번 </div>
+        </div>
+    </body>
+</html>
+
+<!-- 
+
+    1.
+    의사클래스(가상클래스)
+    선택자에 추가하는 키워드.
+    태그가  어떤 특정한 상태가 되었을 때 선택자에 추가한 의사클래스 의미대로 동작.
+    (특정한 상태 : 태그에 마우스 커서 올리기, 태그를 마우스로 누르기가 그것이다).
+    
+    2.
+    선택자:의사클래스{
+        속성명: 속성값;
+    }
+    h1:hover{
+        color: red;
+    }
+    h1 태그에 마우스 커서가 올라오면(hover) 글자를 빨간색으로 하겠다.
+
+    3.
+    hover : 마우스 포인터가 태그에 올라와 있을 때 대괄호 내용을 출력
+    active : 사용자가 태그를 활성화 했을 때(예를들어 마우스로 누르기와 같은것)
+             대괄호 내용을 출력.
+    focus : 태그가 포커스를 받을 때 대괄호 내용 출력.
+    disabled : 비활성 상태인 태그를 선택하고 대괄호 내용을 출력.
+    nth-child() : 1. 형제 태그 사이에서 nth-chile()의 괄호 안에 지정한 숫자와
+                     형제 태그 순서와 맞는 태그를 선택하여 대괄호 내용을 출력.
+                  2. n은 형제 태그 전부를 선택한다는 의미.
+                  3. 2n은 짝수 번째에 위치한 형제 태그를 선택한다는 의미.
+
+    4.
+    disabled
+    태그를 사용 불가 상태로 만드는 속성.  
+    
+    disable : ~을 무능력하게 하다
+
+-->

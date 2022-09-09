@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> z-index</title>
+        <style>
+            *{font-size: 24px;}
+            div{width:100px; height:100px; position: relative;}
+            div:nth-child(1){background-color: red;}
+            div:nth-child(2){background-color: green; bottom: 50px;} 
+            /* bottom: 50px;은 height 200px의 맨 밑에서 50떨어진다를 의미 */
+            div:nth-child(3){background-color: blue; bottom: 100px;}
+             /* bottom: 100px;은 height 300의 맨 밑에서 50떨어진다를 의미 */
+            div:nth-child(4){background-color: yellow; bottom: 150px;}
+            /* 위 9~13번째 줄과 같은 상황에서 태그가 쌓일 수 있다 */
+        
+            .first{z-index: 4;}
+            .second{z-index: 3;}
+            .third{z-index: 2;}
+            .fourth{z-index: 1;}
+            /* 위 16~19번째 줄과 같이 z-index 속성을 사용하여 태그의 쌓임 순서를 지정할 수
+            있다 정수값이 제일 작은 fourth가 가장 아래에 깔리고 그 다음 작은 third가 
+            그 위에 쌓인다. 정수값이 가장큰 first는 가장 위에 쌓인다. */
+        </style>
+    </head>
+    <body>
+        <div class="first"> 1 </div>
+        <div class="second"> 2 </div>
+        <div class="third"> 3 </div>
+        <div class="fourth"> 4 </div>
+    </body>
+</html>
+
+<!--
+
+1. 
+- 포지션 속성을 사용해서 태그의 위치를 변경해줄 경우 화면의 z축 방향으로 쌓이게 되는데, 
+이 때 z-index 속성으로 쌓임 순서를 지정할 수 있다.
+
+2.
+z-index 
+- 태그의 쌓임 순서(stack order)를 정의할 수 있다.
+- 정수 값을 지정하여 쌓임 순서를 지정할 수 있다(정수값이 잘을 수록 아래로 쌓인다, 정수
+  값이 클수록 위로=전면으로 쌓인다).
+- position 속성이 정의되어 있는 태그에서만 사용할 수 있다
+  * 위치 지정 요소(position 속성이 정의되어 있는 태그)에서만 사용할 수 있다.
+
+3.
+위치 지정 요소(positioned element)
+position 속성이 정의되어 있는 태그. 
+relative, absolute, fixed, sticky - 포지션 속성
+
+-->

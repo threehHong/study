@@ -1,0 +1,98 @@
+<!-- https://youtu.be/-Uz9pD-0w90 유튜브 주소 -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> GLAD </title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                list-style: none; /* ul ol 태그에서 앞에 오는 기호를 바꿀 수 있는 속성 */ 
+                text-decoration: none; /* 텍스트 주변에 밑중과 같은 것 제거 */
+                color: black;
+            }
+
+            .header{
+                height: 145px;
+                text-align: center;
+                box-sizing: border-box;
+                border-bottom: 1px solid #999;
+            }
+            
+            .header__logo h1{
+                font: bold 40px 'arial';
+                padding-top: 14px;
+                letter-spacing: 2px; /* 문자간 간격(참고로 word-spacing은 단어간 간격) */
+            }
+            .header__logo p{
+                font: bold 12px 'arial';
+                letter-spacing: 2px;
+                margin-top: -1px;
+            }
+            .header__gnb ul{
+                margin-top: 39px;
+            }
+            .header__gnb ul li{
+                display: inline-block;
+            }
+            
+            .header__gnb ul li a{ /* 띄어쓰기를 통해 특정 태그로 접근할 수 있다 */
+                display: block;
+                font: bold 14px 'arial';
+                color: #999;
+                margin: 0px 16px; /* 0px가 세로, 20px가 가로. */
+                letter-spacing: 1px
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header class="header"> <!-- 시멘틱 태그 -->
+            <div class="header__logo"> 
+                <a href="#">
+                    <h1> GLAD </h1>
+                    <p> YEOUIDO </p>
+                </a>
+            </div>
+            <div class="header__gnb"> 
+                <ul>
+                    <li> <a href="#"> OVERVIEW </a> </li>
+                    <li> <a href="#"> ACCOMMODATION </a> </li>
+                    <li> <a href="#"> DINING & BAR </a> </li>
+                    <li> <a href="#"> WEDDING & METTING </a> </li>
+                    <li> <a href="#"> FACILITIES </a> </li>
+                    <li> <a href="#"> SPECIAL OFFERS </a> </li>
+                    <li> <a href="#"> RESERVATION </a> </li>
+                </ul>
+            </div>
+        </header>
+    </body>
+</html>
+
+<!-- 
+
+1.
+list-style
+ul ol 태그에서 앞에 오는 기호를 바꿀 수 있는 속성
+
+2.
+text-decoration
+text-decoration : none (텍스트만 출력)
+text-decoration : line-through (텍스트 가운데 줄)
+text-decoration : overline (텍스트 위에 줄)
+text-decoration : underline (텍스트 아래 줄, a태그의 기본값)
+text-decoration : inherit (부모 태그의 text-decoration 이어 받음) 
+
+3.
+letter-spacing:
+문자간 간격 속성.
+
+word-spacing
+단어간 간격 속성.
+
+-->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Document </title>
+        <style>
+            input{
+                width: 180px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="문자나 숫자를 입력하세요" onkeydown="func()">
+        
+        <script>
+            /* let a = document.querySelector("input");
+            a.addEventListener('keydown', function(evnet){
+                console.log(evnet.keyCode);
+            }) */
+
+            function func(){
+                console.log(event.keyCode);        
+            }
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1.이벤트 객체
+이벤트 발생시 추가적인 기능과 정보를 제공하기 위해 이벤트 핸들러에 자동으로 전달되는 데이터(이벤트 핸들러 : 이벤트가 발생되면 실행될 코드 블럭).
+
+이벤트 핸들러에 사용된 함수의 매개 변수를 통해 이벤트 객체가 전달된다(매개 변수의 명칭은 자유롭게 사용할 수 있다). * 이벤트 속성으로 사용할 경우 매개 변수를 생략해도 된다.
+
+2. keyCode
+컴퓨터 키보드에서 각각의 키에 부여되어 있는 고유의 번호(어떤 키가 눌리고 해제되었는지를 컴퓨터에 전달하기 위해 사용된다).
+
+3. keyCode의 종류
+<Enter> 13
+<Backspace> 8
+<Space> 32
+<1> 49
+<a> 65
+등등이 있다(keyCode 사진 참고).
+
+ -->
+

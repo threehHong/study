@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 프로토타입 </title>
+    </head>
+    <body>
+        <script> 
+        function User(name, age){
+            // this = {}
+
+            this.name = name;
+            this.age = age;
+
+            // return this;
+        }
+        let user1 = new User("Mike", 30);
+        console.log(user1);
+
+        User.prototype.sex = 'male';
+        // 객체 User에 sex라는 속성 추가.
+        console.log(user1.sex);
+
+            
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+상속
+프로토타입으로 상속을 한다.
+
+프로토타입
+유전자 
+
+
+
+ -->
+

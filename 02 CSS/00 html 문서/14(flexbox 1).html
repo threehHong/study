@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> flexbox, 레이아웃을 유연하게 </title>
+        <style>
+            .container{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .item{
+                width: 80px; height: 80px;
+                background-color: rosybrown;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="item"> 1 </div>
+            <div class="item"> 2 </div>
+            <div class="item"> 3 </div>
+        </div>
+        
+    </body>
+</html>
+
+<!--
+
+0.
+행(row) : 가로
+세로(column) : 세로 
+axis : 축 (축 : 사물의 중심에 위치한 긴 막대기 모양, 사물이나 회전의 중심)
+cross : 교차 (교차 : 서로 마주침)
+        X표, +기호, 십자(+모양)
+        교차하다, 가로지르다(잘라 지나다), 횡단하다(가로질러 건너다).
+layout : (책, 신문, 잡지에서 글이나 그림 등의)배치.
+reverse : 1. 반대, 역. 2. 거꾸로된, 반대의. 3. 거꾸로 하다, 역으로 하다.
+        
+1.
+flexbox
+박스 내 태그 간의 공간 배분과 정렬 기능을 제공하는 1차원 레이아웃 개념
+(1차원은 한번에 하나의 차원(행이나 열)만을 다뤄야 하는 특성을 의미).
+
+2.
+display: flex;
+flexbox 개념을 적용하기 위해서는 diplay 속성과 flex 속성값을 입력해야 한다.
+display 속성의 flex 속성값은 기본적으로 행방향으로 태그를 배치한다.
+
+기본적으로 가로 방향이 주축, 세로 방향이 교차축이고
+사용자의 목적에 따라 주축을 세로 방향에 설정할 수 도 있다.
+
+3.
+flex-direction 속성
+flexbox 내 태그를 배치할 떄 사용할 주축 및 방향(정방향, 역방향)을 지정한다.
+display 속성의 flex 속성값은 기본적으로 행방향으로 태그를 배치한다.
+
+flex-direction 속성값
+row : 주축은 행이고 방향은 곤텐츠의 방향과 동일(정방향).
+row-reverse : 주축은 행, 기존 콘텐츠의 순서 반대, 맨 오른쪽 배치.
+column : 주축은 열이고 방향은 콘텐츠의 방향과 동일
+column-reverse : 주축은 열이고 콘텐츠의 순서 반대.
+
+-->
+

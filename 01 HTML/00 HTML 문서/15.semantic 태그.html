@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            *{text-align: center;}
+            header{
+                border: 2px solid red;
+                line-height: 51px;
+                height: 55px;
+            }
+            nav{
+                border: 2px solid blue;
+                height: 110px;
+                margin-top: 1.5px;
+            }
+            main{
+                border: 2px solid green;
+                height: 300px;
+                line-height: 300px;
+                margin-top: 1.5px;
+            }
+            footer{
+                border: 2px solid black;
+                height: 55px;
+                line-height: 55px;
+                margin-top: 1.5px;
+            }
+            ul{
+                list-style: none;
+                padding-left: 0px;
+                display: flex;
+                justify-content: space-around;
+            }
+          
+        </style>
+    </head>
+
+    <body>
+        <header> Header 영역 </header>
+
+        <nav>
+            <p> 메뉴 영역 </p>
+            <ul>
+                <li> menu1 </li>
+                <li> menu2 </li>
+                <li> menu3 </li>
+                <li> menu4 </li>
+            </ul>
+        </nav>
+
+        <main> Content 영역 </main>
+
+        <footer> Footer 영역 </footer>
+    </body>
+</html>
+
+<!-- 
+
+1.
+semantic 태그의 의미
+코드의 가독성, 검색엔진 최적화, 웹 접근성 향상등을 위해 웹페이지의 특정
+부분과 기능을 의미하는 상위 태그로 해당 상위 태그에 포함되는 태그들을 하나
+로 묶어 관리 할 수 있는 태그를 말한다(header, nav, main, footer 등이 있다).
+
+시멘틱 태그를 적용한 웹페이지에 대한 변화는 없지만 코드의 가독성(코드의 구조
+를 빠르게 파악할 수 있다), 검색엔진 최적화, 웹 접근성 향상등에 이점을 얻을
+수 있다.
+
+semantic 태그의 이점
+가독성 향상(코드의 구조를 빠르게 파악할 수 있다)
+검색엔진 최적화
+웹 접근성 향상
+
+2.
+header : 페이지에 대한 정보를 담는 태그(페이지 상단에 위치)
+nav : 다른 페이지나 같은 페이지 안에 다른 부분으로 이어주는 네비게이션 링크를
+      담는 태그(헤더 바로 밑에 위치).
+main : 문서의 주요 내용, 주요 콘텐츠를 담는 태그(nav 바로 밑에 위치)
+footer : 저작권 정보나 서비스 제공자 정보등을 담는 태그(페이지 하단에
+         위치)
+
+3.
+semantic : 의미의, 의미론적인 
+
+4.
+ol, ul 단축 명령어
+ul>li{menu} : ul 태그에서 li 태그 menu 컨텐츠 생성 
+
+-->
+
+

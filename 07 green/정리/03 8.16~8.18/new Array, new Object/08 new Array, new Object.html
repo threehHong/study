@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> new Array, new Object, arr.length=n; </title>
+    </head>
+    <body>
+        <p class="a1"> </p>
+        <p class="a2"> </p>
+        <script>
+            // 1. new Arrau
+            let arr1 = new Array("a", "b", "c");
+            let txt = document.querySelector('.a1');
+            txt.innerHTML = `${arr1[0]}` + `${arr1[1]}` + `${arr1[2]}`
+            console.log(arr1[0]); console.log("\n");
+            
+            // 2. new Object
+            let actor = new Object({
+                name: "손석구",
+                age: "40",
+                sex: "man"
+            })
+            console.log(actor["name"]); console.log("\n"); 
+            document.write(`${actor["name"]}`); document.write("<br> <br>") 
+            document.write(actor.name);
+            
+            // 3. arr.length = n;
+            let ar = [];
+            ar.length = 9;
+            ar[0] = "e"
+            console.log(ar[0]);
+            
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1. new Array
+let 변수명 = new Array("내용1", "내용2", ...);
+변수명[0]으로 배열에 저장된 값 사용.
+
+2. new Object
+let 변수명 = new Object({
+    속성명(키)1: 속성값.
+    속성명(키)2: 속성값.
+    속성명(키)3: 속성값.
+})
+변수명["속성명"] or 변수명.속성명으로 객체의 속성값에 접근.
+
+3. arr.length=n;
+배열명이 arr이고 길이가(원소의 개수가) n인 배열 생성.
+
+let 배열명 = [];
+배열명.length = 3; 배열명이 배열명이고 길이가(원소의 개수가) 3개인 배열 생성
+배열명[0] = "HTML"
+배열명[1] = "CSS"
+배열명[2] = "JS"
+
+ -->
+

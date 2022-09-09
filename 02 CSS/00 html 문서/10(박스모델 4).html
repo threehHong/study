@@ -1,0 +1,72 @@
+<!-- 박스모델 4 (background 속성) -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 박스모델 4 (background 속성) </title>
+        <style>
+            div{
+                box-sizing: border-box;
+                width: 500px; height: 500px;
+                border: 1px solid red;
+
+                background-color: greenyellow;
+
+                background-image: url(./images/01.jpg);  
+    
+                background-repeat: no-repeat; 
+                
+                background-size: 300px 300px;
+
+                background-position: left center;
+
+                }
+        </style>
+    </head>
+    
+    <body>
+        <div> <strong>박스모델 공부 background 공부 중</strong> </div>
+    </body>
+
+    </html>
+
+<!-- 
+1.
+background-color 속성
+배경에 색깔을 지정하는 속성
+
+2.
+background-image 속성
+1. 배경에 이미지를 삽입하는 속성
+2. url() 함수 이용 
+3. background-image를 출력하면 사진이 반복되는 것을 확인할 수 있다
+    이것은 사진의 원본 사이즈가 테두리 보다 작을 경우 자동으로 같은 사진을
+    반복해서 나머지 여백을 채운다 이것은 background-repeat으로 설정한다.    
+
+3.
+background-repeat 속성
+배경 이미지의 반복 설정 속성
+repeat과 no-repeat이 있다. 
+
+4.
+background-size 속성
+배경 이미지의 사이즈 설정 속성
+background-size: 100px 200px; (연달아 입력하면 가로 100px 높이 200px 의미).
+background-size: cover; (이미지가 테두리 사이즈를 꽉 채우게 설정, 이미지가 손상되지 않게
+최대사이즈로 설정).
+background-size: contain;(이미지가 손산되거나 잘리지 않게 최대사이즈로 설정)
+
+5.
+background-position 속성
+배경 이미지의 위치 설정 속성
+top, right, bottom, left, center를 사용해서 이미지의 위치 설정(2개를 조합해서 사용 가능).
+기본값은 left top이다.
+
+6.
+background: 속성값; 형태로도 사용 가능
+ex. 
+background: url(./images/01.jpg);
+-->
+

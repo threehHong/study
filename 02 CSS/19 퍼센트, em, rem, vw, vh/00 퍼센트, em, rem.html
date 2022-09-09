@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> %, em, rem 단위 </title>
+        <style>
+            .parent{ 
+                width: 600px; height: 600px;
+                margin: 0px; background: rgb(201, 179, 125);
+            }
+            .child{
+                width: 50%; height: 50%;
+                /* 부모태그의 width는 600px이고 자식태그의 width 50%이다
+                   %단위는 부모 태그 크기의 x%를 의미하므로 자식 태그의 절대 크기는 300px이다 
+                   개발자 도구로 확인해보기 */
+                margin: 0px; background: rgb(92, 170, 206);
+            }
+            .outer{
+                font-size: 24px;
+            }
+            .inner1{
+                margin-top: 20px;
+                font-size: 2em; 
+                /* 1em = 24px, 2em = 48px; */
+            }
+            .inner2{
+                margin-top: 20px;
+                font-size: 2rem; 
+                /* html 기본 font-size의 크기는 16px, 1rem = 16px, 2rem = 32px*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="outer">
+            <div class="inner1"> em 태그 연습중 </div>
+            <div class="inner2"> rem 태그 연습중 </div>
+        </div>
+    </body>
+</html>
+
+<!-- 
+
+1.
+%
+태그의 박스의 크기를 설정할 때 사용하는 상대 단위
+부모 태그 크기의 x%를 의미한다.
+ex) 부모 태그 A의 width가 100px이고 자식 태그인 B의 width가 50%이라면 B태그의 크기는 50px이다(부모 태그의 50%이므로 100/2).
+
+2.
+em, rem
+글꼴 크기를 설정할 때 사용하는 상대 단위(브라우저나 기기 화면의 크기에 따라 달라지지 않는 단위)
+
+em
+부모 태그의 글꼴 크기의 몇배 인지를 의미하는 상대 단위
+ex) 부모 태그에서 폰트 사이즈가 20px일 경우 자식 태그에서 폰트 사이즈 1em은 20px이다.
+
+rem
+html 태그의 글꼴 크기의 몇배 인지를 의미하는 상대 단위(참고로 html태그의 font-size는 기본 16px이다, rem의 r은 루트를 의미).
+
+padding과 margin에 em 적용
+em은 자기 자신 태그의 font-size에 기반해서 padding과 margin에 em을 적용할 수 있다. 
+rem은 html 태그의 font-size에 기반해서 padding과 margin 에 적용할 수 있다.
+
+ -->
+

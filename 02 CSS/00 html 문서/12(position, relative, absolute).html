@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> position, relative, absolute </title>
+        <style>
+            #a{
+                width: 100px; height: 100px;
+                background-color: purple;
+                position: relative;
+                left: 100px;
+            }
+            div{
+                width: 200px; height: 200px;
+                background-color: yellow;
+                position: relative;
+                border: 1px solid black;
+            }
+            .abs{
+                width: 100px; height: 100px;
+                background-color: red;  
+                position: absolute;
+                top: 0px; /* absolute 속성값이 적용되어 문서의 흐름에서 제외되어 p태그 문장이랑
+                             겹치는 상활 발생 */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a"></div>
+        <div> </div>
+        <div> 
+            <div class="abs"> </div> 
+            <p> position 속성, absolute 속성값 </p>
+        </div>
+    </body>
+    </html>
+    
+<!-- 
+1.
+position 속성
+문서 상에 태그의 위치를 정의하는 속성
+static, relative, absolute, fixed, sticky 속성값 +
+top, bottom, right, left 속성과 px단위 속성 값으로 위치를 지정
+
+2.
+position 속성값
+static : 태그를 일반적인 문서 흐름에 따라 배치(기본값). * 일반적인 문서의 흐름에 따라 배치.
+
+relative : 1. 일반적인 문서 흐름에 따라 배치하되, 상하좌우 위치 값에 따라 오프셋을 적용. * 일반적인 문서의 흐름에 따라 배치.
+           2. 오프셋(보충) : 위치를 얼마간 이동시키는 것을 의미.
+
+absolute : 상위 태그 중 가장 가까운 position 지정 태그에 대해 상대적으로 오프셋을 적용
+           (가까운 position 태그가 없을 경우 브라우저 화면을 기준으로 오프셋 적용). * 일반적인 문서의 흐름에서 제외.
+
+fixed : 태그가 정해진 위치에 고정되어 움직이지 않는다(스크롤을 움직여도 제자리에 있다). * 일반적인 문서의 흐름에서 제외.
+
+sticky : 태그가 스크롤을 움직일때 일반적인 흐름대로 움직이다 태그가 페이지의 맨 위나 아래에 위치될 경우 그 자리에 고정되고 
+         고정된 태그 밑으로 페이지의 내용이 이어진다. * 일반적인 문서의 흐름에 따라 배치.
+
+relative : 1. 상대적인. 2. 친척.
+absolute : 완전한, 완벽한, 확실한.
+fix : 고정시키다, (날짜를)정하다, 수리하다 고치다.
+sticky : 1. 끈적거리는, 스티커식의. 2. 접착용 쪽지.
+
+3.
+top, right, bottom, left 속성
+top : 윗쪽에서부터 얼마나 떨어뜨릴지 표시(속성값은 px)
+right : 오른쪽에서부터 얼마나 떨어뜨릴지 표시(속성값은 px)
+bottom : 아랫쪽에서부터 얼마나 떨어트릴지 표시(속성값은 px)
+left : 왼쪽에서부터 얼마나 떨어트릴지 표시(속성값은 px)
+
+-->
+
+
+

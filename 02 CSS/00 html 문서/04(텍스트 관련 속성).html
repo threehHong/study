@@ -1,0 +1,83 @@
+<!-- 텍스트 관련 속성-->
+
+<!DOCTYPE html>
+
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <title> 글꼴, 사이즈 속성 </title>
+        <style>
+           /* font-family */
+           h1, p{font-family: monospace, serif;}
+           
+           /* font-size, px */
+           h2{font-size: 40px;}
+           strong{font-size: 40px;}
+
+           html{font-size: 10px;}
+
+           /* font-size, rem */
+           em{font-size: 5rem;}
+
+           /* font-size, em */
+           span{font-size: 2em}
+       </style>
+    </head>
+    <body>
+        <!-- font-family -->
+        <h1> 텍스트의 글꼴을 정의하는 속성 </h1>
+        <p> 텍스트의 글꼴을 정의하는 속성 </p> <br> <br> <hr>
+        <!-- font-size, px -->
+        <h2> 텍스트의 크기를 정의하는 속성 px </h2>
+        <strong> 텍스트의 크기를 정의하는 속성 px </strong> <br> <br> <br> <hr> <br> <br>
+        <!-- font-size, rem -->
+        <em> 텍스트의 크기를 정의하는 속성 rem </em> <br> <br> <hr>  <br> <br>
+        <!-- font-size, em -->
+        <h3> 텍스트의 <span>크기를 정의하는 속성 em </span> em </h3>
+    </body>
+    
+</html> 
+
+<!-- 
+1. 
+font-family
+텍스트의 글꼴을 정의하는 속성
+
+선택자{font-family : 폰트1, 폰트2, 폰트3;}
+폰트1을 우선 지정하되, 폰 트1이 지원되지 않을 경우 폰트2를 지정.
+속성값으로 monospace, serif 등이 있다
+
+2.
+font-size
+텍스트의 크기를 정의하는 속성.
+px : 모니터 상의 화소 하나 크기에 대응하는 절대적인 크기(h1 태그는 기본적으로 32px).
+rem : <html> 태그의 font-size에 대응하는 상대적인 크기(html 태그의 font-size x 수치rem).
+em : 부모태그(상위태그)의 font-size에 대응하는 상대적인 크기(부모태그(상위태그)의 font-size x 수치em).
+
+ex
+선택자{font-size: 16px;}
+선택자{font-size: 2rem;} -> html 폰트 사이즈 x 2
+선택자{font-size: 1.5em;} -> 선택자 태그를 감싸고 있는 상위 태그 폰트 사이즈 x 1.5
+
+3.
+text-align (align : ~에 맞춰 ~을 조정(조절)하다, 가지런히 만들다)
+텍스트의 정렬 방식을 정의하는 속성.
+속성값 : left or right 왼쪽 또는 오른쪽으로 정렬, center 가운데로 정렬, justify 양끝 정렬(마지막줄 제외) 
+
+4.
+color
+텍스트의 색상을 정의하는 속성.
+키워드 : 미리 정의된 색상 키워드를 사용한다(ex. red, blue 등).
+RGB 색상 코드 : Red, Green Blue의 정도를 각각 16진수로 정의해서 나타내는 방식(# + 여섯자리). 
+RGB 함수 Red, Green, Blue의 정도를 각각 백분율로 정의해서 나타내는 방식.
+
+선택자{color: red;}
+선택자{color: #FF0000;} R:00, G:00, B:00 각각을 00~FF까지 16진수로 표현할 수 있다.
+선택자{color: rgb(100%, 0%, 0%);}
+위 세가지는 모두 같은색이다.
+
+RGB 색상
+빛의 삼원색(Red, Green, Blue)을 혼합하여 색을 정의하는 방식(모든 수치가 가장 높을 떄 흰색이 된다.)
+
+-->
+

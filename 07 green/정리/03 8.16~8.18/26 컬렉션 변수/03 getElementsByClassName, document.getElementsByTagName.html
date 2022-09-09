@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> getElementsByClassName, document.getElementsByTagName </title>
+    </head>
+    <body>
+        <p class="a"> 주인공 </p>
+        <h1 class="a"> 을 </h1>
+        <strong class="a"> 찾아라 </strong> <br> <br>
+
+        <em> 주인공 </em>
+        <em> 을 </em>
+        <em> 찾아라 </em>
+        <script>
+            const classA = document.getElementsByClassName("a")[1];
+            console.log(classA);
+            const classB = document.getElementsByTagName("em")[2]
+            console.log(classB);
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1. 해당 클래스를 가진 태그 중 세번째것 선택
+document.getElementsByClassName(클래스명).item(2)
+또는
+document.getElementsByClassName(클래스명)[2]
+
+2. 해당 태그들 중 세번째것 선택
+document.getElementsByTagName(태그명).item(2)
+또는
+document.getElementsByTagName(태그명)[2]
+
+3. 0이 첫번째(배열 생각하기).
+
+ -->
+

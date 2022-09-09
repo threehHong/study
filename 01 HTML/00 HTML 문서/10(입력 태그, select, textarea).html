@@ -1,0 +1,48 @@
+<!-- 입력 태그(select, textarea) -->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta utf-8>
+        <title> select와 textarea</title>
+    </head>
+
+    <body>
+        <h1> 커피 브랜드를 선택하세요 </h1>
+        <select name="coffee">
+            <option value="coffee brand 1"> STARBUCKS </option>
+            <option value="coffee brand 2"> TOM N TOMS </option>
+            <option value="coffee brand 3" selected> EDIYA COFFEE</option>
+            <option value="coffee brand 4"> A TWOSOME PLACE </option>
+            <option value="coffee brand 5"> HOLLYS COFFEE </option>
+        </select>  <br>  <br>
+
+        <textarea name="text" rows="10" cols="30" > </textarea>
+    </body>
+
+</html>
+
+<!-- select 태그(인라인 요소)
+     1. 선택 메뉴를 나타내는 태그
+     2. 선택지는 option 태그를 통해 표시.
+     3. select의 name 속성과, option의 value 속성은 자바스크립트를 통한 데이터 처리시 
+     사용된다(화면에는 표시 X)
+    -->
+
+<!-- multiple 속성
+     1. select 태그 안에서 클릭을 통해 목록을 열어 확이하는 반면, multiple 속성을 사용할
+     경우 전체 목록이 열려 있는 것을 확인 할 수 있다.
+     2. 컨트롤을 누르고 클릭하면 여러개를 선택할 수 있다.
+     3. select 태그 안에서 사용. -->
+ 
+<!-- selected 속성 
+    목록에서 selected 되어있는 곳으로 표시가 되는 것(option 태그 안에서 사용) -->
+
+<!-- textarea 태그(인라인 요소)
+     여러줄의 텍스트를 입력할 수 있는 태그, 여러줄의 텍스트를 입력할 떄 줄수가 많아지면
+     자동으로 스크롤이 생긴다(textarea 태그에도 name 속성을 사용 할 수 있다) -->
+
+<!-- rows, cols 속성
+    1. textarea 태그에서 텍스트 범위를 설정하는 속성. 
+    2. row : 행(가로), column : 열(세로) -->

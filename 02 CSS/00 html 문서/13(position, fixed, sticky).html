@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> position, relative, absolute </title>
+        <style>
+            .pos{
+                width: 200px; height: 200px;
+                background-color: tomato;
+                position: fixed; 
+                top: 20px; left: 100px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div> 
+            첫번째 <br> 첫번째 <br> 첫번째 <br> 첫번째 <br>
+            두번째 <br> 두번째 <br> 두번째 <br> 두번째 <br>
+            세번째 <br> 세번째 <br> 세번째 <br> 세번째 <br>
+            네번째 <br> 네번째 <br> 네번째 <br> 네번째 <br>
+            다섯번째 <br> 다섯번째 <br> 다섯번째 <br> 다섯번째 <br>
+            여섯번째 <br> 여섯번째 <br> 여섯번째 <br> 여섯번째 <br>
+        </div>
+        <div class="pos"> <strong> fixed </strong> </div>
+        <div>
+            일곱번째 <br> 일곱번째 <br> 일곱번째 <br> 일곱번째 <br>
+            여덟번째 <br> 여덟번째 <br> 여덟번째 <br> 여덟번째 <br>
+            열번째 <br> 열번째 <br> 열번째 <br> 열번째 <br>
+            열한번째 <br> 열한번째 <br> 열한번째 <br> 열한번째 <br>
+            열두번째 <br> 열두번째 <br> 열두번째 <br> 열두번째 <br>
+        </div>
+    </body>
+</html>
+
+<!-- 
+
+fixed
+태그가 정해진 위치에 고정되어 움직이지 않는다(스크롤을 움직여도 제자리에 있다). 
+* 일반적인 문서의 흐름에서 제외.
+
+sticky
+태그가 스크롤을 움직일때 일반적인 흐름대로 움직이다 태그가 페이지의 
+맨 위나 아래에 위치될 경우 그 자리에 고정되고 고정된 태그 밑으로 페이지의 내용이 이어진다. 
+* 일반적인 문서의 흐름에 따라 배치.
+
+-->

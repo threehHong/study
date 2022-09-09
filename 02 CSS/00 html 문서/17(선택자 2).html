@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 선택자 2 </title>
+        <style>
+            /* 자손 결합자 */
+            body h1{color: blue;}
+            body p{color: green;}
+            p > span{color: red;}
+
+            p ~ em{color: purple}
+            h2 + h3{color: aqua;}
+
+        </style>
+    </head>
+
+    <body>
+        <h1> 선택자 2 연습하기 </h1>
+        <p> 1번 문단 일반 태그</p>
+        <p class="text"> 2번 문단 class </p>
+        <p id="unique"> 3번 문단 id </p>
+        <p class="text"> 4번 문단 class </p>
+        <p id="unique"> 5번 문단 <span> span 태그가 있는 문단 </span> id </p>
+        <em> 6번 문단 </em> <br> <br>
+        <em> 7번 문단 </em> <br> <br>
+        <strong class="a"> 8번 문단 </strong> <br> <br>
+        <strong id="b"> 9번 문단 </strong> <br> <br>
+        <em> 10번 문단 </em> <br> <br>
+        <em> 11번 문단 </em> <br> <br>
+        <strong class="a"> 12번 문단 </strong> <br>
+        <h2> 13번 문단 </h2>
+        <h3> 14번 문단 </h3>
+    </body>
+</html>
+
+<!-- 
+
+1.
+결합 선택자
+두 개 이상의 선택자를 결합시켜 결합된 조건을 만족하는 태그를 선택하는 선택자
+자손 결합자와 형제 결합자가 있다.
+
+2.
+자손 결합자
+div p{color: white;}
+div 태그 안에 위치하는 모든 p 요소 선택하기(상위 태그와 상위 태그에 포함되는 하위 태그여야 한다).
+div > p{color: white;}
+div 태그 바로 아래에 위치하는 모든 p 요소 선택하기(상위 태그와 상위 태그에 포함되는 하위 태그여야 한다).
+
+형제 결합자
+h1 ~ p{color: red;}
+h1 태그 뒤에 오는 모든 p태그 선택하기.
+h1 + p{color: red;}
+h1 태그 바로 뒤에 오는 p태그 하나 선택하기.
+
+-->
+

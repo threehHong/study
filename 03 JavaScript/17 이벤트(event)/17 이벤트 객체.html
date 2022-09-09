@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button class="btn"> Click1 </button>
+
+        <script>
+            const btn = document.querySelector(".btn");
+
+            btn.addEventListener('click', function(a){
+                console.log(a); console.log('\n');
+                console.log(a.target);
+                // a라는 이벤트 객체에 접근해서 target이라는 속성을 입력하면
+                // 이벤트가 발생한 태그에 대한 데이터를 얻을 수 있다.
+            });
+
+        </script>
+    </body>
+</html>
+
+
+<!--
+
+이벤트 객체
+1. 이벤트 발생시 호출되는 함수에 자동으로 전달되는 데이터
+
+2. 매개 변수를 통해 데이터가 전달 된다, 매개변수의 명칭은 자유롭게 정의한다.
+
+3. 이벤트 객체에는 여러가지 정보와 기능이 포함되어 있고 이벤트 객체에 접근해서 무언가
+를 할 수 있다.
+
+ex)
+event.target - event 객체에 있는 target 속성에 접근
+target은 이벤트가 발생한 태그를 의미. 
+
+-->
+
+

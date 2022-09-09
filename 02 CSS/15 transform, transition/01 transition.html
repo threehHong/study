@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                padding: 0; margin: 0; background-color: lightgray;
+            }
+            .outline, .box{
+                width: 60px; height: 60px;
+            }
+            .outline{
+                border: 3px solid yellow;
+                margin: 0 auto;  /* margin에서 0 auto의 의미는? */
+                margin-top: 20px;
+            }
+            .box{
+                background-color: blue;
+            }
+            .box1{
+                transform: translateX(20px);
+            }
+            .box2{
+                transform: scaleX(2);
+            }
+            .box3{ 
+                transform: rotatex(45deg);
+            }
+            .outline-box{
+                perspective: 50px;
+            }
+            .box4{
+                transform: skew(30deg);
+            }
+            .box1:hover{
+                width: 200px;
+                height: 200px;
+                background-color: green;
+                transform: rotate(180deg);
+            } 
+            .box1{
+                transition-property: all;
+                /* transition-duration: 2s; */
+                /* transition-delay: 1s; */
+                /* transition-timing-function: ease-in; */
+                /* transition-timing-function: ease-out; */
+                transition: 2s 1s ease-in-out;
+            }
+
+        </style>
+    
+    </head>
+    <body>
+        <div class="outline">
+            <div class="box box1"></div> <!-- class명 띄어쓰기 가능? -->
+        </div>
+
+        <div class="outline">
+            <div class="box box2"></div>
+        </div>
+
+        <div class="outline outline-box">
+            <div class="box box3"></div>
+        </div>
+
+        <div class="outline">
+            <div class="box box4"></div>
+        </div>
+        
+    </body>
+</html>
+
+<!--
+    
+1.
+transition
+색 or 크기의 변화 시간을 조절해주는 속성.
+
+2.
+transition-property
+트랜지션 효과를 줄 속성 지정(ex. width, height 등등).
+all - 모든 속성을 지정(생략 가능).
+none - 아무것도 지정하지 않음.
+
+transition-duration
+변화 시간 지정.
+
+transition-delay
+지연 시간 지정(지정한 초 만큼 기다렸다가 실행).
+
+transition-timing-function
+트랜지션의 변화 시간 속도 지정.
+linear - 트랜지션의 시작과 끝의 속도가 일정.
+ease-in - 천천히-보통(천천히 시작했다 완료될 때 속도 증가).
+ease-out - 보통-천천히(빨리 시작했다가 완료될 떄 속도 감소).
+ease-in-out - 천천-보통-천천.
+
+transition: t0s, t1s
+t0s만 있을 경우 - 변화 시간 지정.
+t0s, t1s가 있을 경우 - t0s가 변화 시간 지정, t1s가 지연 시간 지정.
+
+3.
+transition : 전환, 변화, 과정, 이동.
+
+
+ -->

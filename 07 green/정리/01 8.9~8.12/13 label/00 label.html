@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> label 태그</title>
+        <style>
+            div{
+                margin: 10px;
+            }
+            .dvck{
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label for="id"> ID </label> :
+            <input type="text" id="id" placeholder="아이디"> <br>
+        </div>
+        <div>         
+            <label for="pas"> PASSWORD </label> :
+            <input type="text" id="pas" placeholder="비밀번호"> <br>
+        </div>
+
+        <div class="dvck">
+            <label for="ck">
+                <input type="checkbox" id="ck"> 동의
+            </label>
+        </div>
+    </body>
+</html>
+
+<!--
+    
+label 태그
+for 속성과 같이 사용.
+for 속성값에는 이동하고자 하는 태그의 id값으로 입력한다.
+웹페이지에서 label 태그 내용 클릭시 for의 속성값과 동일한 id값을 가지고 있는 태그로 이동한다.
+
+input, button, textarea, select 태그들과 같이 사용될 수 있다 
+
+-->
+

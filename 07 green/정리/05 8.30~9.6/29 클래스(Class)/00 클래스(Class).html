@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 클래스(Class) </title>
+    </head>
+    <body>
+        <script>
+            /////// 생성자 함수 ///////
+            function User1(name, age){
+                // this ={} 
+                this.name = name;
+                this.age = age;
+                this.showName = function(){
+                    console.log(this.name);
+            }  
+                // return this;
+            }
+            let user1 = new User1('Tom', 30);
+            let user2 = new User1('Bob', 28);
+            console.log(user1, user2); console.log("\n");
+            console.log(user1.name); console.log("\n");
+            
+            /////// 클래스(Class) ///////
+            class User2{
+                constructor(name, age){
+                    this.name = name;
+                    this.age = age;
+                }
+                showName(){
+                    console.log(this.name); 
+                }
+            }
+            let userA = new User2("Mike", 32);
+            console.log(userA.age);
+        </script>
+    </body>
+</html>
+
+<!--  
+
+1.
+클래스(Class) - 생성자 함수와 유사한 개념
+특정 형태로 객체를 생성하는 코드(비슷한 종류의 객체를 빠르게 여러개 만들고 싶을 떄 사용).
+
+2.
+클래스(Class)의 원리
+new 키워드를 사용하여 함수를 호출한다 -> 전달된 매개변수에 따라 원본 함수의 코드 내용이 실행되어 객체를 생성한다.
+
+ -->
+

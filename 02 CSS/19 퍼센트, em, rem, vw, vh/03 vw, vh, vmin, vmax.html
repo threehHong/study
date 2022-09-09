@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> vw, vh, vmin, vmax 단위</title>
+        <style>
+            p{
+                margin: 0;
+                font-size: 50vw; /* 웹페이지 화면 전체의 가로 x (50/100) */
+                font-size: 50vh; /* 웹페이지 화면 전체의 높이 x (50/100) */
+                /* 웹페이지의 화면 전체 사이즈에 따라 폰트사이즈가 달라지는 것을 확인 할 수 있다. */
+            }
+        </style>
+    </head>
+    <body>
+        <p> v w </p>
+    </body>
+</html>
+
+<!-- 
+
+vw, vh 
+웹페이지 화면 전체(뷰포트)를 기준으로 크기를 설정하는 단위.
+브라우저나 기기 화면의 크기에 따라 크기가 달라지는 단위(반응형 단위)
+    
+font-size: 1vw;
+뷰포트 가로 x (1/100) (뷰포트 가로 = 웹페이지 화면 전체의 가로)
+ex) font-size: 2vw;
+    뷰포트 가로 x (2/100)
+
+font-size: 1vh;
+뷰포트 높이 x (1/100)
+
+font-size: 1vmin;
+뷰포트 가로와 높이 중 작은 쪽 x (1/100)
+
+font-size: 1vmax;
+뷰포트 가로와 높이 중 큰 쪽 x (1/100)
+
+ -->
+ 
+
