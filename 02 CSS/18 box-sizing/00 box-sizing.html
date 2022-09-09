@@ -30,8 +30,8 @@
 
 1.
 - 어떤 태그의 width와 height 값은 해당 태그에서 컨텐츠 영역의 가로와 세로의 크기를 의미한다.
-- 어떤 영역 내부의 하위 태그에 width나 height값을 설정하면 컨텐츠 영역의 크기는 전부 설정한 값과 같아진다.
-  그러나 여기서 각 하위 태그별 padding이나 border의 값이 다르게 추가될 경우 각 태그별 (컨텐츠 영역의 크기+padding의 크기+border의 크기)가 달라질 수 있다
+- 하위 태그를 포함하는 상위 태그에 width나 height값을 설정하면 하위 태그들의 컨텐츠 영역의 크기는 전부 설정한 값으로 같아진다.
+  그러나 여기서 각 하위 태그별 padding이나 border의 값이 다르게 추가될 경우 각 태그별 (컨텐츠 영역의 크기+padding의 크기+border의 크기)크기 가 달라질 수 있다
   이 때 box-sizing: border-box;를 통해 모든 각 하위 태그별 컨텐츠 영역의 크기+padding의 크기+border의 크기를 통일 시킬 수 있다.
 
 2.
@@ -43,7 +43,7 @@ box-sizing: border-box
 - 보통 여러 태그에 동시에 적용하기 위해 적용하고 싶은 상위태그에 사용한다.
 
 box-sizing: content-box (기본값 설정)
-width와 height의 크기(컨텐츠의 크기) + padding의 크기 + border의 크기.
+전체 크기 = width와 height의 크기(컨텐츠의 크기) + padding의 크기 + border의 크기.
 
 3. 
 CSS 박스모델 참고
