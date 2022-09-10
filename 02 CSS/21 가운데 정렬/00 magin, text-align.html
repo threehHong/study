@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> margin: 0 auto; text-align: center; </title>
+        <style>
+            .parents{
+                width: 200px;
+                height: 200px;
+                border: 2px solid orange;
+                text-align: center;
+                margin: 0 auto;
+                /* margin: x y;에서 x값은 상하, y값은 좌우를 의미. */
+                /* margin: 0 auto;로 설정하면 가운데로 정렬된다. */
+            }
+            .children{
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                border: 2px solid orange;
+            }
+           .a{
+            text-align: center;
+           }
+        </style> 
+    </head>
+    <body>
+        <div class="parents">
+            <div class="children"> marign </div>
+        </div>
+        <div class="a"> text-align </div>
+    </body>
+</html>
+
+<!-- 
+
+margin: 0 auto; 
+태그의 보더 영역을 가운데 정렬하고 나머지 마진 영역을 좌우 균등하게 정렬한다는 의미.
+(margin: x y;에서 x값은 상하, y값은 좌우를 의미)
+auto
+남은 영역을 균등하게 배분해준다는 의미.
+속성값으로 사용되는 키워드.
+
+text-align
+- 컨텐츠 영역 내부에 있는 내용을 가로 방향으로 가운데 정렬
+- 인라인 레벨 태그를 가로 방향으로 가운데 정렬하기 위해서는 인라인 레벨 태그를 블럭 
+  레벨인 부모 태그 안에 위치 시키고 부모 태그에 text-align을 적용하여 사용할 수 있다.
+
+ -->
+
