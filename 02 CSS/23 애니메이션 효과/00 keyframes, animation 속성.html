@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 애니메이션 효과 </title>
+        <style>
+            @keyframes leftmargin{
+                0%{margin-left: 0;}
+                100%{margin-left: 100px;}
+            }
+            .move{
+                animation: leftmargin 1s linear infinite alternate;
+            }
+
+            @keyframes changeC{
+                from{background-color: green;}
+                to{background-color: blue;}
+            }
+            .changeC{
+                width: 200px;
+                height: 200px;
+                animation-name: changeC; 
+                animation-iteration-count: 3;
+                animation-duration: 4s;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="move"> 애니메이션 </div>
+
+        <div class="changeC"> </div>
+    </body>
+</html>
+
+<!-- 
+
+1.
+@keyframes 키워드와 animation 속성을 활용한 애니메이션 효과의 기본 형태
+
+@keyframes
+@keyframse 이름A{
+    from{적용할 속성과 속성값} // 시작
+    to{적용할 속성과 속성값}   // 끝
+}
+
+or
+
+@keyframse 이름{
+    0%{적용할 속성과 속성값}   // 시작
+    100%{적용할 속성과 속성값} // 끝
+}
+
+.이름A{
+    적용 할 애니메이션 속성과 속성값. 
+    ex)
+    anmation-name: 이름A;
+    anmation-duration: 2s;
+}
+
+적용 할 애니메이션 속성을 keyframes 밑에 위치 시키자(애니메이션 속성이 keyframes 위에 있어도 실행되지만)
+animation-name:을 가장 먼저 입력하자(anmation-name: 가장 앞에 위치하지 않아도 실행되지만).
+
+2.
+애니메이션 속성
+animation-name : 속성값으로 @keyframes 우측에 정의한 이름
+
+animation-duration : 애니메이션이 동작되는 시간, 속성값으로 1s, 1000ms등이 있다
+
+animation-delay : 딜레이 시간(요소가 로드되고 애니메이션이 작동되는 시간).
+
+animation-direction : 애니메이션의 진행방향, nomal(정방향, 다시시작), alternate(왕복), reverse(역방향 진행).
+
+animation-iteration-count : 애니메이션 반복 횟수, 숫자 or infinite 속성값
+
+animation-timing-function : 전환 속도 조절 속성, 속성값으로 linear, ease-in, ease-out, ease-in-out, ease 등이 있다.
+
+==================== 밑에 애니메이션 속성 추후 탐구 및 정리 ====================
+
+animation-play-state : 애니메이션을 멈추거나 시작하게 하는 속성
+
+animation-fill-mode : 애니메이션이 끝난 후 처음으로 이동할지 유지할지를 설정하는 속성 
+속성값으로 none, forwars(진행방향에서 멈춰라), backwards(뒤로), both(양 방향) 등이 있다
+
+3.
+anmation : name, duration, timing-function, iteration-delay, direction 순으로 적어주면 한번에 한번에 다양한 애니메이션 속성을 적용할 수 있다
+
+ -->
+
