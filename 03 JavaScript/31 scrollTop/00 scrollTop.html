@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> scrollTop() 메소드 </title>
+        <style>
+            h1{
+                position: fixed;
+            }
+            div{
+                height: 2000px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="sc"> scrollTop </h1>
+        <div> </div>
+        <script>
+            let tit = document.querySelector('.sc');
+            document.addEventListener('scroll', function(){
+                let val = document.documentElement.scrollTop;
+                console.log(document.documentElement);
+                console.log(val);
+                tit.innerHTML = val;
+
+            })
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1. 
+scrollTop
+- 수직 스크롤바가 웹페이지 상당으로 부터 떨어진 정도의 값을 반환하는 메소드.
+  ex) let 변수명 = document.documentElement.scrollTop
+      스크롤바의 수직 위치값을 반환하여 변수명에 저장
+
+- 수직 스크롤바의 위치를 지정하는 메소드(설정한 위치값에 스크롤바 고정).
+  ex) document.documentElement.scrollTop = 200;
+      스크롤바의 수직 위치값을 200위치에 고정. 
+
+2. 
+document.documentElement
+html 태그 반환
+document
+웹페에지 전체 반환
+
+3. 
+document.documentElement.scrollTop; 에서 
+window.scrollTop이 안되는 이유 + scrollTop 앞에 다른 객체 오는 방법 탐구 및 정리.
+
+scrollTop은 jQuery 문법인듯 하다.
+
+-->
+
+
+
