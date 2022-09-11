@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> box-shadow </title>
+        <style>
+            body{
+                height: 900px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box{
+                width: 300px;
+                height: 300px;
+                background-color: pink;
+                box-shadow: 
+                  5px 5px 21px 18px rgba(0,0,0,0.4),
+                  2px 2px 2px 18px rgba(10,12,50,0.4),
+                  5px 5px 21px 18px rgba(0,0,0,0.4);
+                  /* rgba(red, green, blue, opacity) */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"> </div>
+    </body>
+</html>
+
+<!-- 
+
+1.
+box-shadow
+태그 주변이나 내부에 그림자 효과를 주는 태그.
+
+box-shadow: 수평거리, 수직 거리, 블러 범위, 그림자 범위, 색상; (태그 주변에 그림자 효과).
+
+box-shadow: inset 수평거리, 수직 거리, 블러 범위, 그림자 범위, 색상; (태그 내부에 그림자 효과).
+
+2.
+box-shadow 속성값 생성해주는 사이트
+https://html-css-js.com/css/generator/box-shadow/
+
+ -->
+
