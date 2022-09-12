@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> inline, block, inline-block, border </title>
+        <style>
+            div{
+                display: inline;
+                border: 3px solid red;
+                width: 200px; /* inline이므로 적용되지 않는다. */
+                height: 200px; /* inline이므로 적용되지 않는다. */
+            }
+            span{
+                display: block;
+                border: 2px solid rgb(100%, 50%, 0%);
+            }
+            h1{
+                border: 2px solid green;
+            }
+            em{
+                display: none; /* 화면 표시 되지 않는다. */
+            }
+        </style>    
+    </head>
+
+    <body>
+        <div> 블록 레벨 요소에 display: inline; 적용 </div> <br> <br>
+
+        <span> 인라인 요소에 display: block; 적용 </span>
+
+        <h1> 블록 레벨 요소 </h1> <br>
+
+        <em> 인라인 요소 </em>
+
+    </body>
+</html>
+
+<!-- 
+
+1.
+블록 레벨 요소 : 1. 문자가 속한 영역의 줄 전체를 모두 차지하여 블록 형성(div, p, h1)
+                2. 해당 줄에 다른 태그의 블록이 올 수 없다. 
+인라인 요소 : 1. 문자가 표시된 영역만 블록 형성(span, a)
+             2. 해당 줄에 다른 태그의 블록이 올 수 있다.
+2.
+display 속성
+태그를 블록레벨 요소 or 인라인 요소 중 어느 쪽으로 처리할지 정의하는 속성.
+
+display의 속성값
+inline : 인라인으로 처리
+
+block : 블록 레벨로 처리
+
+inline-block : 인라인으로 배치하되, width와 height 값을 조정할 수 있도록 처리.
+               (인라인 요소는 width와 height를 조정할 수 없지만 블록레벨 요소는 할 수 있다).
+
+none : 화면에 표시되지 않는다.
+
+ex)
+div{display: inline;}, a{dispaly: block;}
+
+3. 
+border 속성 (border : 가장자리, 경계)
+태그가 차지하고 있는 영역에 테두리를 표시하는 속성(영역은 블록 레벨 요소 & 인라인 요소를 의미).
+
+border의 속성값(단축속성)
+px(두께 or 크기), 모양(none, solid, dotted, dashed), 색깔.
+
+boder 속성의 하위 속성
+border-width : 1. 두께 or 크기. 2. thin, medium, thick 등의 키워드 또는 px, em, rem등의 단위
+border-style : 2. 모양. 2. none(기본값), solid(직선), dotted(점선), dashed(긴 점선).
+border-color : color 정의 방식과 동일
+
+span{border: 2px solid green;}
+두께가 2px인 solid(직선 모양)의 green(초록) 테두리.
+
+-->
+
