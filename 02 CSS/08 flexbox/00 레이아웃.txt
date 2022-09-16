@@ -1,0 +1,6 @@
+1.
+레이아웃(layout)
+구성 요소를 공간에 배치하는 일 또는 그 기술.
+
+레이아웃에 사용되는 CSS 개념
+float, clear, position, flexbox, grid 등이 있다. 
