@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> user-select </title>
+        <style>
+            .box{
+                border: 1px solid darkblue;
+                margin: 30px;
+                padding: 20px;
+                font-weight: bold;
+                font-size: 2rem;
+                user-select: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"> user-select 속성 테스트, 여기를 클릭 또는 드래그하세요 </div>
+    </body>
+</html>
+
+<!-- 
+
+user-select: auto   or   user-select: text
+기본값, 생략 가능. 
+텍스트를 클릭 또는 드래그 가능.
+
+user-select: none
+텍스트 영역 클릭 및 드래그 불가.
+
+user-select: all
+텍스트 영역 클릭 한번으로 텍스트 전체 드래그 됨.
+
+-->
+
