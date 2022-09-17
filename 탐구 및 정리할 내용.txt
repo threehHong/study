@@ -1,0 +1,5 @@
+max-width
+height: auto;
+border-radius
+user-select
+&#10094
