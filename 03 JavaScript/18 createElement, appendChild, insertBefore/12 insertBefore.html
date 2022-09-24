@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> insertBefore </title>
+        <style>
+            .container{
+                width: 500px;
+                height: 100px;
+                border: 2px solid black;
+                padding: 0px;
+            }
+            .box{
+                list-style: none;
+                width: 100px;
+                height: 50px;
+                border: 2px solid saddlebrown;
+                margin: 10px;
+                text-align: center;
+                display: inline-block;
+            }
+            .box1{background-color: red;}
+            .box2{background-color: orange;}
+            .box3{background-color: yellow;}
+            .btn{
+                width: 200px;
+                height: 100px;
+                font-size: 32px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="container">
+            <li class="box1 box"> box1 </li>
+            <li class="box2 box"> box2 </li>
+            <li class="box3 box"> box3 </li>
+        </ul>
+        <button class="btn"> insertBefore </button>
+        <script>
+                let btn = document.querySelector('.btn');
+                let container = document.querySelector('.container');
+    
+                btn.onclick = () => {
+                    console.log('버튼 클릭');
+                    let box = document.querySelectorAll('.box');
+                    container.insertBefore(box[2], box[0]);
+                }
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+insertBefore(추가할 태그, 추가할 태그 앞에 위차할 태그)
+기존 태그나 새로운 태그를 특정 자식 태그 바로 앞으로 추가하는 메소드(옮기는 메소드).
+    
+ -->
+
+
+ 
