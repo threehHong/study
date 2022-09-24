@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title> 의사 클래스(가상클래스) 1, hover, active </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> nth-child, nth-of-type </title>
         <style>
-            [type="button"]{
-                width: 100px; height: 30px;
-                background-color: tomato;
-                color: white;
-                border: none; border-radius: 8px;
+            *{
+                font-weight: bold;
             }
-
-            [type="button"]:hover{
-                background-color: gray;
+            
+            /* p:nth-child(2){
+                background-color: yellow;
+            } */
+            /* div태그 기준 p태그 2번째 30번째 줄 p태그 
+               body태그 기준 p태그 2번째 33번째 줄 p태그 */
+            
+            p:nth-of-type(2){
+                background-color: yellow;
             }
-
-            [type="button"]:active{
-                background-color: black;
-            }
+            /* div태그 기준 p태그중 2번째는 30번째 줄 p태그 
+               body태그 기준 p태그중 2번째는 34번째 줄 p태그 */      
         </style>
     </head>
-
     <body>
-        <input type="button" value="버튼">
+        <div>
+            <p> nth-child, nth-of-type </p>
+            <p> nth-child, nth-of-type </p>
+        </div>
         
+        <p> nth-child, nth-of-type </p>
+        <p> nth-child, nth-of-type </p>
     </body>
 </html>
 
@@ -56,7 +63,7 @@
 
     선택자A:nth-child() : 1. 부모에 속한 자식태그 선택자A와 괄호안의 숫자(자식태그 첫번째부터 차례대로)를 모두 만족하는 선택자A에 대괄호의 내용 적용.
     
-    선택자A:nth-of-type() : 1. 선택자A중에서 괄호안의 숫자에 해당하는 순서의 선택자A에 대괄호 내용 적용(단 각 부모에 속한 선택자A중에서 괄호안의 숫자에 해당하는 순서의 선택자A에 대괄호 내용을 적용한다는 점이 nth-child와 다른점).
+    선택자A:nth-of-type() : 1. 각 부모에 속한 선택자A중에서 괄호안의 숫자에 해당하는 순서의 선택자A에 대괄호 내용 적용.
 
     4.
     disabled
