@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> linear-gradient </title>
+        <style>
+            div{
+                width: 100%;
+                height: 80px;
+                margin-top: 20px;
+            }
+            .grad1{ background: linear-gradient(to bottom, yellow, red);}
+            .grad2{ background: linear-gradient(to top, yellow, red);}
+            .grad3{ background: linear-gradient(to left, yellow, red);}
+            .grad4{ background-image: linear-gradient(to right, yellow, red);}
+            .grad5{ background-image: linear-gradient(45deg, yellow, red);}
+            .grad6{ background-image: linear-gradient(to right, yellow 50%, red 60%, purple, blue);}
+        </style>
+    </head>
+    <body>
+        <div class="grad1"> to bottom, yellow, red </div>
+        <div class="grad2"> to top, yellow, red </div>
+        <div class="grad3"> to left, yellow, red </div>
+        <div class="grad4"> to right, yellow, red </div>
+        <div class="grad5"> 45deg, yellow, red </div>
+        <div class="grad6"> to right, yellow 50%, red 60%, purple </div>
+    </body>
+</html>
+
+<!-- 
+
+1.
+gradient
+변화도, 경사도, 기울기(수학), 선형의(수학), 1차의(수학)
+linear
+선의, 직선의, 직선 모양의
+
+2.
+linear-gradient
+설정한 색상으로 서서히 변하게 만드는 속성값(속성으로 background나 background-image 사용).
+
+linear-gradient(direction, color1, color2, ..., color3)
+to top : 아래에서 위로 그라데이션 효과.
+to bottom : 위에서 아래로 그라데이션 효과.
+to left : 오른쪽에서 왼쪽으로 그라데이션 효과.
+to right : 왼쪽에서 오른쪽으로 그라데이션 효과.
+ndeg : 각도 n도의 방향으로 그라데이션 효과
+
+* 색만 입력했을 때는 색을 균등하게 배분하여 그라데이션 효과 생성
+* 색 뒤에 백분율이나 픽셀을 입력하면 해당 백분율이나 픽셀 만큼의 길이까지 색 사용해서 그라데이션 효과
+
+ex)
+background: linear-gradient(to right, yellow, red);
+왼쪽에서 오른쪽으로 노란색에서 빨간색으로 서서히 변화.
+
+background-image: linear-gradient(to right, yellow 50%, red 60%, purple);
+왼쪽에서 50%까지는 노란색, 50% 초과 60% 이하에는 빨간색, 나머지는 보라색 사용해서 그라데이션 효과.
+
+ -->
+
