@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> className </title>
+        <style>
+            *{
+                margin: 10px;
+                font-size: 38px;
+            }
+            .class{
+                color: darkcyan;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="clt"> className test </div>
+        <button class="btn"> click </button>
+
+        <script>
+            let btn = document.querySelector('.btn');
+
+            btn.onclick = function(){
+                let clt = document.getElementById('clt');
+                clt.className = "class name";
+                /* 쌍따옴표 안의 내용을 클래스명으로 추가(기존 클래스명이 있을 경우 위 내용으로 변경 */
+                clt.className += " test";
+                /* 쌍따옴표 안의 내용을 기존 클래스명에 이어서 추가(띄어쓰기를 하지 않을 경우 기존 클래스명에서 띄어지지 않고 그대로 이어진다, 새로운 식별용 클래스명을 추가하기 위해서는 띄어쓰기를 해야 한다) */
+            }
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+className
+태그에 클래스명을 추가하는 메소드
+    
+ -->
