@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> bind </title>
+    </head>
+    <body>
+        <script>
+            /* 1 */
+            let obj = {
+                name: 'tom'
+            }
+
+            function bindT1(){
+                console.log(this.name);
+            }
+            bindT1(); /* undefined 출력 */
+
+            let a = bindT1.bind(obj);
+            a(); /* tom 출력 */
+            /* 
+            1. bind함수 즉 함수A.bind(객체B)을 사용하면 this는 bind함수의 괄호안에 입력한 객체(object)를 가리킨다 
+            2. 객체B에 함수A를 포함시킨다 생각하기.
+            */
+
+            /* 2 */
+            function bindT3(n){
+                console.log(n);
+            }
+            let b = bindT3.bind(null, 1);
+            /* 객체에 null, 매개변수 1전달 */
+            
+            b();
+
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1. bind함수
+함수A.bind(객체B) 형태.
+객체B에 함수A를 포함시킨다 생각하기.
+
+2. 참고
+https://ko.javascript.info/bind
+
+simon/02_ImageSlider/portfolio에서 bind 사용 부분 참고.
+
+simon의 document.getElementById('firstDot').addEventListener('click', currentImageSlide.bind(null,1));에서 currentImageSlide.bind(null,1)이 호출되는 이유는 이 부분은 함수명만 적어도 자동으로 소괄호 없이 호출 되기 때문?
+
+-->
+
