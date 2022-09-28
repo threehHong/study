@@ -25,23 +25,27 @@ button.addEventListener('click', function(){
 setTimeout (윈도우 객체의 메소드)
 정해진 시간이 지나고 나면 주어진 함수를 실행 해주는 타이머 메소드
 
-setTimeout(실행할 함수, ms 단위의 시간) 
+setTimeout(실행할 함수, ms 단위의 시간). 1000ms = 1s.
 
 2.
 setInterval (윈도우 객체의 메소드)
 일정한 시간 간격에 따라 주어진 함수를 반복 실행 해주는 메소드
 
-setInterval(반복 실핼할 함수, ms 단위의 시간)
+setInterval(반복 실핼할 함수, ms 단위의 시간). 1000ms = 1s.
 
 3.
 clearInterval (윈도우 객체의 메소드)
-setInterval을 멈추게 해주는 메소드.
-setInterval 메소드는 x라는 0이 아닌값을 반환한다(이 x는 setInterval 메소
-드의 아이디이다)
-clearInterval(x)와 같이 설정하면 setInterval 메소드가 멈춘다.
+setInterval을 멈추게 해주는 메소드
+* setInterval을 멈추기 위해서는 clearInterval의 괄호 안에 setInterval을 저장한 변수를 넣어야 한다.
+
+ex)
+let 변수A = setInterval(콜백 함수, 시간); - 반복 시작
+clearInterval(변수A); - 반복 중단
+변수A = setInterval(콜백 함수, 시간); - 재시작
 
 4.
 콜백 함수 : 함수의 인자로 쓰인 함수.
 
  */
+
 
