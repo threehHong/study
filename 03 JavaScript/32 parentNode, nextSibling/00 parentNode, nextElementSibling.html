@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> parentNode, nextElementSibling </title>
+    </head>
+    <body>
+        <div class="box"> 
+            <p class="text"> parentNode, nextSibling  </p>
+            <img src="">
+        </div>
+        <button class="btn"> button </button>
+
+        <script>
+            function test (event) {
+                let a = event.target;
+                console.log(a);
+
+                let b = a.parentNode;
+                console.log(b);
+            }
+            let btn = document.querySelector('.btn');
+            btn.onclick = test
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1.
+HTML 문서에서 HTML DOM 노드에 접근하는 방법 2가지
+- getElementbyId, querySelector 등을 이용한 접근.
+- event.target과 노드 간의 관계를 이용한 접근.
+
+2.
+parentNode : 부모 노드
+nextElementSibling : 바로 옆 형제 노드
+
+3. 
+이벤트 객체
+- 이벤트 발생시 호출되는 함수에 자동으로 전달되는 데이터.
+- 이벤트 객체에 접근하여 다양한 정보를 얻을 수 있다.
+- 이벤트 객체의 명칭은 자유롭게 정의할 수 있다.
+
+event.target : 클릭된 태그(이벤트 객체에 있는 target 속성에 접근).
+event : 이벤트 객체
+target : 이벤트가 발생한 태그.
+
+-->
