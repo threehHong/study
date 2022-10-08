@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> scrollTo </title>
+        <style>
+            .box1{
+                height: 800px;
+                margin: 20px;
+                font-size: 32px;
+                font-weight: bold;
+            }
+            .box2{
+                height: 800px;
+                margin: 20px;
+                font-size: 32px;
+                font-weight: bold;
+            }
+            .btn1{
+                margin: 20px;
+            }     
+            .btn2{
+                margin: 20px;
+            }     
+        </style>
+    </head>
+    <body>
+        <div class="box1"> scrollTo TEST1 </div>
+        <div class="box2"> scrollTo TEST2 </div>
+        <button class="btn1"> Click1 </button>
+        <button class="btn2"> Click2 </button>
+
+        <script>
+
+            let loc = document.querySelector('.box2').offsetTop
+            console.log(loc);
+
+            function move (a) {
+                if(a == 1) {
+                    /* window.scrollTo(0, 0); */
+                    window.scrollTo({top: 0, behavior: "smooth"});
+                } else {
+                    /* window.scrollTo(0, loc); */
+                    window.scrollTo({top: loc, behavior: "smooth"});
+                    /* 해당 위치로 스크롤을 스무스하게 이동시키는 방법 */
+                }
+            }
+
+            let btn1 = document.querySelector('.btn1')
+            btn1.addEventListener('click', move.bind(null, 1))
+            let btn2 = document.querySelector('.btn2')
+            btn2.addEventListener('click', move.bind(null, 2))
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+1.
+window.scrollTo(x축의 위치값, y축의 위치값);
+괄호 안의 x축의 위치값, y축의 위치값 위치로 스크롤을 이동시켜주는 메소드.
+
+2.
+offsetTop
+어떤 엘리먼트 위치의 top값을 반환하는 메소드
+ex. let loc = document.querySelector('.box2').offsetTop
+
+3. 
+해당 위치로 스크롤을 스무스하게 이동시키는 방법.
+window.scrollTo({top: top의 위치값, behavior: "smooth"});
+
+-->
+
