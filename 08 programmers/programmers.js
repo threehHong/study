@@ -16,3 +16,26 @@
         console.log(error);
     }
 } */
+
+/* 코딩 테스트 연습/Lv.0/나이 출력. (22.10.22)  */
+/* function solution(age) {
+    if(age > 0 && age <= 120) {
+        let answer = (2022-age) + 1;
+        return answer;
+    } else {
+        let error = "error";
+        console.log(error);
+    }
+} */
+
+/* 코딩 테스트 연습/Lv.0/몫 구하기. (22.10.22)  */
+/* function solution(num1, num2) {
+    if(num1 <= 100 && num1 > 0 && num2 <= 100 && num2 > 0){
+        let calc = num1 / num2;
+        let answer = Math.floor(calc);
+        return answer;
+    } else {
+        let error = "error";
+        console.log(error);
+    }
+} */

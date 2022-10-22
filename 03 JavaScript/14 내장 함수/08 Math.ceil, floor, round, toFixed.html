@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Math.ceil, floor, round, toFixed </title>
+    </head>
+    <body>
+        <script>
+            const num1 = 3.1;
+            const num2 = 3.5;
+            const num3 = 3.141592;
+    
+            /* Math.ceil(변수) - 소수점 이하의 숫자를 올림 */
+            console.log(Math.ceil(num1)); console.log('\n');
+
+            /* Math.floor(변수) - 소수점 이하의 숫자를 버림 */
+            console.log(Math.floor(num1)); console.log('\n');
+
+            /* Math.round(변수) - 소수점 이하의 숫자를 반올림 */
+            console.log(Math.round(num1));
+            console.log(Math.round(num2)); console.log('\n');
+
+            /* 변수.toFixed(n) - 소수점 n자리로 반올림(n자리 이후 숫자 제거) */
+            console.log(num3.toFixed(4)); console.log('\n');
+
+        </script>
+    </body>
+</html>
+
