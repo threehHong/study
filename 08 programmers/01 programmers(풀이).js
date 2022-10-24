@@ -51,7 +51,7 @@
 } */
 
 /* 코딩 테스트 연습/ Lv.0 / 숫자 비교하기. (22.10.23)  */
-function solution(num1, num2) {
+/* function solution(num1, num2) {
     if(num1 <= 10000 && num1 >= 0 && num2 <= 10000 && num2 >= 0){
         if(num1 == num2){
             return 1;
@@ -60,5 +60,25 @@ function solution(num1, num2) {
         }
     } else {
         console.log('error');
+    }
+} */
+
+/* 코딩 테스트 연습/ Lv.0 / 각도기. (22.10.24)  */
+function solution(angle) {
+    if(angle % 1 != 0){
+        console.log('정수를 입력하세요');
+    } else{
+        if(angle < 90 && angle > 0){
+            return 1;
+        } 
+        if (angle == 90) {
+            return 2;
+        } 
+        if (angle < 180 && angle > 90) {
+            return 3;
+        } 
+        if (angle == 180){
+            return 4;
+        }
     }
 }
