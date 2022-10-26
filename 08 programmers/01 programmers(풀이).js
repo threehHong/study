@@ -96,36 +96,42 @@
 /* 코딩 테스트 연습/ Lv.0 / 분수의 덧셈. (22.10.25)  */
 function solution(denum1, num1, denum2, num2) {
     if(0 < denum1 < 1000 && 0 < num1 < 1000 && 0 < denum2 < 1000 && 0 < num2 < 1000) {
-        let answer = [];
         numerator = (denum1 * num2) + (denum2 * num1);
         denominator = num1 * num2;
-
+        
+        let answer = [];
         answer[0] = numerator;
         answer[1] = denominator;
 
-        let maxnum = 0;
+        let maxnum = 1;
         let loop = 1;
-        
+        let i = 2;
 
-        for(i = 0; i<= numerator; i++){
-            if(answer[0]%i === 0 || answer[1]%i === 0){
-                maxnum = i;
+        for(i = 2; i <= numerator; i++){
+            while(loop){
+                a = answer[0]/i
+                b = answer[1]/i
+                if(a%1 != 0 || b%1 != 0) {
+                    loop = 0;
+                } 
+                if (answer[0] % i == 0 && answer[1] % i == 0) {
+                    answer[0] = answer[0] / i;
+                    answer[1] = answer[1] / i;
+                    maxnum *= i;
+                }
             }
         }
-        while(loop){
-            if(answer[0]/maxnum != 0 || answer[1]/maxnum != 0){
-                loop = 0;
-            } else {
-                answer[0] = answer[0]/maxnum ;
-                answer[1] = answer[1]/maxnum ;
-            }
-        }
+        
+        answer[0] = numerator / maxnum;
+        answer[1] = denominator / maxnum;
+
         return answer;
     } else {
         console.log('error');
     }
 }
 
-console.log(solution(4,3,2,1));
+console.log(solution(9,2,1,3));
+/* console.log(1/2); */
 
 
