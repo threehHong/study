@@ -132,7 +132,7 @@
     }
 } */
 
-/* 코딩 테스트 연습/ Lv.0 / 분수의 덧셈. (22.10.27) */
+/* 코딩 테스트 연습/ Lv.0 / 분수의 덧셈 (22.10.27) */
 /* GCD : Greatest Common Divisor */
 // function solution(denum1, num1, denum2, num2) {
 //     if(0 < denum1 < 1000 && 0 < num1 < 1000 && 0 < denum2 < 1000 && 0 < num2 < 1000) {
@@ -176,3 +176,52 @@ gcd(1, 0)의 결과값은 1이므로 결과적으로 gcd(3, 5)의 값도 1이됨
 gcd(2, 1)을 반환하는 gcd(3, 2)의 값도 1,
 타고타고 가서 결과적으로 gcd(3, 5)의 값은 1이 나옴 */
 
+/* 코딩 테스트 연습/ Lv.0 / 짝수의 합. (22.10.28) */
+/* function solution(n) {
+    let answer = 0;
+
+    for(i=1; i<=n; i++){
+        if(i%2 == 0){
+            answer += i;
+        }
+    }
+
+    return answer;
+} */
+
+/* 코딩 테스트 연습/ Lv.0 / 배열의 평균값 (22.10.28) */
+/* function solution(numbers) {
+    let answer = 0;
+    let sum = 0;
+    let arr = [];
+    arr = numbers;
+
+    for(i=0; i<arr.length; i++){
+        sum += arr[i];
+    }
+
+    answer = sum / arr.length;
+
+    return answer;
+}
+
+numbers = [89,90,91,92,93,94,95,96,97,98,99]
+
+console.log(solution(numbers)); */
+
+/* 코딩 테스트 연습/ Lv.0 / 머쓱이보다 키 큰 사람 (22.10.28) */
+/* function solution(array, height) {
+    let answer = 0;
+
+    for(i=0; i<array.length; i++){
+        if(array[i] > height){
+            answer += 1;
+        }
+    }
+    return answer;
+}
+
+array = [180,120,140];
+height = 190;
+
+console.log(solution(array, height)); */
