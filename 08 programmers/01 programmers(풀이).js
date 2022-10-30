@@ -242,3 +242,23 @@ console.log(solution(array, height)); */
 array = [1,1,2,3,4,5];
 
 console.log(solution(array, 1)); */
+
+/* 코딩 테스트 연습/ Lv.0 / 양꼬치 (22.10.30) */
+/* function solution(n, k) {
+    var answer = 0;
+
+    let service = 0;
+
+    for (i = 1; i <= n; i++){
+        if(i % 10 == 0) {
+            service += 2000;
+        }
+    }
+
+    let meat = n * 12000;
+    let beverage = (k * 2000) - service;
+
+    return answer = (meat+beverage);
+}
+
+console.log(solution(64, 3)); */
