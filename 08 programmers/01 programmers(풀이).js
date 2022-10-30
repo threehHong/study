@@ -225,3 +225,20 @@ array = [180,120,140];
 height = 190;
 
 console.log(solution(array, height)); */
+
+/* 코딩 테스트 연습/ Lv.0 / 중복된 숫자 개수 (22.10.29) */
+/* function solution(array, n) {
+    let answer = 0;
+
+    for(i=0; i<array.length; i++) {
+        if(array[i] == n) {
+            answer ++;
+        }
+    }
+
+    return answer;
+}
+
+array = [1,1,2,3,4,5];
+
+console.log(solution(array, 1)); */
