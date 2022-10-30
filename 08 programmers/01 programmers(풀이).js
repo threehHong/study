@@ -262,3 +262,40 @@ console.log(solution(array, 1)); */
 }
 
 console.log(solution(64, 3)); */
+
+/* 코딩 테스트 연습/ Lv.0 / 편지 (22.10.30) */
+/* function solution(message) {
+    var answer = 0;
+    
+    for(i=0; i<message.length; i++){
+        answer++;
+    }
+
+    return answer*2;
+}
+
+console.log(solution("i love you~")); */
+
+/* 코딩 테스트 연습/ Lv.0 / 짝수 홀수 개수 (22.10.30) */
+/* function solution(num_list) {
+    let answer = [];
+
+    let evennum = 0;
+    let oddnum = 0;
+
+    for(i=0; i<num_list.length; i++) {
+        if(num_list[i] % 2 == 0){
+            evennum++;
+        } else {
+            oddnum++;
+        }
+    }
+
+    answer[0] = evennum;
+    answer[1] = oddnum;
+
+    return answer;
+}
+
+console.log(solution([1,3,5,7])); */
+
