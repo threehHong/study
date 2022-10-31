@@ -204,9 +204,7 @@ gcd(2, 1)을 반환하는 gcd(3, 2)의 값도 1,
 
     return answer;
 }
-
 numbers = [89,90,91,92,93,94,95,96,97,98,99]
-
 console.log(solution(numbers)); */
 
 /* 코딩 테스트 연습/ Lv.0 / 머쓱이보다 키 큰 사람 (22.10.28) */
@@ -220,10 +218,8 @@ console.log(solution(numbers)); */
     }
     return answer;
 }
-
 array = [180,120,140];
 height = 190;
-
 console.log(solution(array, height)); */
 
 /* 코딩 테스트 연습/ Lv.0 / 중복된 숫자 개수 (22.10.29) */
@@ -238,7 +234,6 @@ console.log(solution(array, height)); */
 
     return answer;
 }
-
 array = [1,1,2,3,4,5];
 
 console.log(solution(array, 1)); */
@@ -260,7 +255,6 @@ console.log(solution(array, 1)); */
 
     return answer = (meat+beverage);
 }
-
 console.log(solution(64, 3)); */
 
 /* 코딩 테스트 연습/ Lv.0 / 편지 (22.10.30) */
@@ -273,7 +267,6 @@ console.log(solution(64, 3)); */
 
     return answer*2;
 }
-
 console.log(solution("i love you~")); */
 
 /* 코딩 테스트 연습/ Lv.0 / 짝수 홀수 개수 (22.10.30) */
@@ -296,6 +289,17 @@ console.log(solution("i love you~")); */
 
     return answer;
 }
-
 console.log(solution([1,3,5,7])); */
+
+/* 코딩 테스트 연습/ Lv.0 / 배열 두배 만들기 (22.10.31) */
+/* function solution(numbers) {
+    let answer = [];
+
+    for(i=0; i<numbers.length; i++) {
+        answer[i] = numbers[i] * 2;
+    }
+
+    return answer;
+}
+console.log(solution([1,2,100,-99,1,2,3])); */
 
