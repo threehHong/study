@@ -303,3 +303,15 @@ console.log(solution([1,3,5,7])); */
 }
 console.log(solution([1,2,100,-99,1,2,3])); */
 
+/* 코딩 테스트 연습/ Lv.0 / 배열 뒤집기 (22.11.01) */
+/* function solution(num_list) {
+    let answer = [];
+
+    for(i=0; i < num_list.length; i++){
+        answer[i] = num_list[num_list.length-1-i]
+    }
+
+    return answer;
+}
+
+console.log(solution([1,2,3,4,5])) */
