@@ -303,7 +303,7 @@ console.log(solution([1,3,5,7])); */
 }
 console.log(solution([1,2,100,-99,1,2,3])); */
 
-/* 코딩 테스트 연습/ Lv.0 / 배열 뒤집기 (22.11.01) */
+/* 코딩 테스트 연습/ Lv.0 / 배열 뒤집기 (22.11.01) 오답 다시 풀어야 함 */
 /* function solution(num_list) {
     let answer = [];
 
@@ -315,3 +315,16 @@ console.log(solution([1,2,100,-99,1,2,3])); */
 }
 
 console.log(solution([1,2,3,4,5])) */
+
+/* 코딩 테스트 연습/ Lv.0 / 배열 원소의 길이 (22.11.05) */
+/* function solution(strlist) {
+    let answer = [];
+
+    for(i=0; i<strlist.length; i++){
+        answer[i] = strlist[i].length
+    }
+    
+    return answer;
+}
+
+console.log(solution(["we", "are", "the", "world!"])); */
