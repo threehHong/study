@@ -304,7 +304,7 @@ console.log(solution([1,3,5,7])); */
 console.log(solution([1,2,100,-99,1,2,3])); */
 
 /* 코딩 테스트 연습/ Lv.0 / 문자열 뒤집기 (22.11.01) 오답 다시 풀어야 함 */
-function solution(num_list) {
+/* function solution(num_list) {
     let answer = [];
 
     for(i=0; i < num_list.length; i++){
@@ -315,7 +315,7 @@ function solution(num_list) {
     return answer;
 }
 
-console.log(solution("jaron"))
+console.log(solution("jaron")) */
 
 /* 코딩 테스트 연습/ Lv.0 / 배열 원소의 길이 (22.11.05) */
 /* function solution(strlist) {
@@ -329,3 +329,30 @@ console.log(solution("jaron"))
 }
 
 console.log(solution(["we", "are", "the", "world!"])); */
+
+/* 코딩 테스트 연습/ Lv.0 / 최대값 만들기 (1) (22.11.05) */
+function solution(numbers) {
+    let answer = 0;
+    let max1 = 0;
+    let max2 = 0;
+
+    console.log(numbers);
+
+    for(i=0; i<numbers.length; i++) {
+        if(numbers[i] > max1) {
+            max1 = numbers[i];
+        }
+    }
+
+    for(i=0; i<numbers.length; i++) { 
+        if(numbers[i] < max1 && numbers[i] > max2 ) {
+            max2 = numbers[i];
+        }
+    }
+
+    console.log(max1, max2);
+
+    return max1 * max2;
+}
+
+console.log(solution([1,2,3,5,6,5]));
