@@ -317,7 +317,7 @@ console.log(solution([1,2,100,-99,1,2,3])); */
 console.log(solution([1,2,3,4,5])) */
 
 /* 코딩 테스트 연습/ Lv.0 / 문자열 뒤집기 (22.11.03) */
-function solution(my_string) {
+/* function solution(my_string) {
     let answer = '';
 
     for(i=0; i<my_string.length; i++){
@@ -329,4 +329,28 @@ function solution(my_string) {
 }
 
 
-console.log(solution("jaron"));
+console.log(solution("jaron")); */
+
+/* 코딩 테스트 연습/ Lv.0 / 제곱수 판별하기 (22.11.07) */
+/* Number.isInteger() 괄호안의 숫자가 정수일 경우 true, 정수가 아닐 경우 false 반환
+   Math.sqrt() 괄호안의 숫자의 제곱근을 반환. */
+function solution(n) {
+    let answer = 0;
+
+    let a = Number.isInteger(Math.sqrt(n));
+    console.log(a)
+
+    if(Number.isInteger(Math.sqrt(n))){
+        answer = 1;
+    } else {
+        answer = 2;
+    }
+
+    return answer;
+}
+
+function solution(n) {
+    return Math.sqrt(n) % 1 === 0 ? 1 : 2
+}
+
+console.log(solution(144));
