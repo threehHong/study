@@ -315,3 +315,18 @@ console.log(solution([1,2,100,-99,1,2,3])); */
 }
 
 console.log(solution([1,2,3,4,5])) */
+
+/* 코딩 테스트 연습/ Lv.0 / 문자열 뒤집기 (22.11.03) */
+function solution(my_string) {
+    let answer = '';
+
+    for(i=0; i<my_string.length; i++){
+        console.log(my_string[(my_string.length-1)-i]);
+        answer[i] = my_string[(my_string.length-1)-i];
+    }
+
+    return answer;
+}
+
+
+console.log(solution("jaron"));
