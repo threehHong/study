@@ -303,103 +303,54 @@ console.log(solution([1,3,5,7])); */
 }
 console.log(solution([1,2,100,-99,1,2,3])); */
 
-/* 코딩 테스트 연습/ Lv.0 / 문자열 뒤집기 (22.11.01) 오답 다시 풀어야 함 */
+/* 코딩 테스트 연습/ Lv.0 / 배열 뒤집기 (22.11.01) */
 /* function solution(num_list) {
     let answer = [];
 
     for(i=0; i < num_list.length; i++){
         answer[i] = num_list[num_list.length-1-i]
     }
-    console.log(answer)
 
     return answer;
 }
 
-console.log(solution("jaron")) */
+console.log(solution([1,2,3,4,5])) */
 
-/* 코딩 테스트 연습/ Lv.0 / 배열 원소의 길이 (22.11.05) */
-/* function solution(strlist) {
-    let answer = [];
+/* 코딩 테스트 연습/ Lv.0 / 문자열 뒤집기 (22.11.03) */
+/* function solution(my_string) {
+    let answer = '';
 
-    for(i=0; i<strlist.length; i++){
-        answer[i] = strlist[i].length
+    for(i=0; i<my_string.length; i++){
+        console.log(my_string[(my_string.length-1)-i]);
+        answer[i] = my_string[(my_string.length-1)-i];
     }
-    
+
     return answer;
 }
 
-console.log(solution(["we", "are", "the", "world!"])); */
 
+console.log(solution("jaron")); */
 
-/* 코딩 테스트 연습/ Lv.0 / 최대값 만들기 (1) * 음수가 존재 할 경우의 상황으로 문제 풀었는데 완벽하지 않고 제한 사항이 양수이다. (22.11.05) */
-/* function solution(numbers) {
+/* 코딩 테스트 연습/ Lv.0 / 제곱수 판별하기 (22.11.07) */
+/* Number.isInteger() 괄호안의 숫자가 정수일 경우 true, 정수가 아닐 경우 false 반환
+   Math.sqrt() 괄호안의 숫자의 제곱근을 반환. */
+function solution(n) {
     let answer = 0;
-    let max1 = 0;
-    let max2 = 0;
-    let negativenum = 0;
 
-    console.log(numbers);
+    let a = Number.isInteger(Math.sqrt(n));
+    console.log(a)
 
-    for(i=0; i<numbers.length; i++) {
-        if(numbers[i] < 0) {
-            negativenum++;
-        } 
-    }
-    
-    if (negativenum % 2) {
-        for(i=0; i<numbers.length; i++) { 
-            if(numbers[i] < 0) {
-                numbers[i] = numbers[i] * -1;
-            } 
-            if (numbers[i] > max1) {
-                max1 = numbers[i];
-            }
-        }
-
-        for(i=0; i<numbers.length; i++) { 
-            if(numbers[i] < 0) {
-                numbers[i] = numbers[i] * -1;
-            } 
-            if (numbers[i] < max1 && numbers[i] > max2 ) {
-                max2 = numbers[i];
-            }
-        }
+    if(Number.isInteger(Math.sqrt(n))){
+        answer = 1;
     } else {
-        for(i=0; i<numbers.length; i++) { 
-            if (numbers[i] > max1) {
-                max1 = numbers[i];
-            }
-        }
-        for(i=0; i<numbers.length; i++) { 
-            if (numbers[i] < max1 && numbers[i] > max2 ) {
-                max2 = numbers[i];
-            }
-        }
-    }
-    
-
-    console.log(max1, max2);
-
-    return max1 * max2;
-}
-
-console.log(solution([1, 2, 3, 4])); */
-
-/* 코딩 테스트 연습/ Lv.0 / 최대값 만들기 (1) */
-function solution(numbers) {
-    let answer = 0;
-    let max1 = 0;
-    let max2 = 0;
-
-    console.log(numbers);
-
-    for(i=0; i<numbers.length; i++) {
-        if(numbers[i] < 0) {
-            negativenum++;
-        } 
+        answer = 2;
     }
 
-    console.log(max1, max2);
-
-    return max1 * max2;
+    return answer;
 }
+
+function solution(n) {
+    return Math.sqrt(n) % 1 === 0 ? 1 : 2
+}
+
+console.log(solution(144));
