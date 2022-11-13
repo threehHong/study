@@ -334,7 +334,7 @@ console.log(solution("jaron")); */
 /* 코딩 테스트 연습/ Lv.0 / 제곱수 판별하기 (22.11.07) */
 /* Number.isInteger() 괄호안의 숫자가 정수일 경우 true, 정수가 아닐 경우 false 반환
    Math.sqrt() 괄호안의 숫자의 제곱근을 반환. */
-function solution(n) {
+/* function solution(n) {
     let answer = 0;
 
     let a = Number.isInteger(Math.sqrt(n));
@@ -353,4 +353,21 @@ function solution(n) {
     return Math.sqrt(n) % 1 === 0 ? 1 : 2
 }
 
-console.log(solution(144));
+console.log(solution(144)); */
+
+/* 코딩 테스트 연습/ Lv.0 / 문자 반복 출력하기 (22.11.13) */
+function solution(my_string, n) {
+    var answer = '';
+    
+    console.log(my_string);
+
+    for(i=0; i<my_string; i++) {
+        for(j=0; j<n; j++) {
+            answer[i] = my_string[i];
+        }
+    }
+
+    return answer;
+}
+
+console.log(solution('hello'));
