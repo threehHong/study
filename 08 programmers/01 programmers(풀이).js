@@ -356,7 +356,7 @@ function solution(n) {
 console.log(solution(144)); */
 
 /* 코딩 테스트 연습/ Lv.0 / 문자 반복 출력하기 (22.11.13) */
-function solution(my_string, n) {
+/* function solution(my_string, n) {
     var answer = '';
     
     console.log(my_string);
@@ -370,4 +370,27 @@ function solution(my_string, n) {
     return answer;
 }
 
-console.log(solution('hello'));
+console.log(solution('hello')); */
+
+/* 코딩 테스트 연습/ Lv.0 / 약수 구하기 (22.11.16) */
+function solution(n) {
+    var answer = [];
+
+    for(i=1; i<=n; i++) {
+        if(n % i == 0) {
+            answer[i] = i;
+        }
+    }
+
+    answer.sort;
+
+    answer.sort((a, b) => {
+        return a - b;
+    });
+
+    console.log(answer);
+
+    return answer;
+}
+
+console.log(solution(24));
