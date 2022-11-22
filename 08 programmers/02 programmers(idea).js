@@ -1,3 +1,7 @@
+/* 나머지 계산시 몫이 실수가 되면 안된다, 따라서 
+   정수 n을 1로 나누면 나머지는 0, 실수 n을 1로 나누면 나머지는 n.  
+   a < b라면 a % b = a가 성립하는 것인가? 추후 탐구 및 정리 */
+
 /********** 실수 판별 방법 1 (22.10.23) **********/
 let n = 0.5;
 if(n % 1 != 0){
@@ -37,4 +41,21 @@ console.log(ranNum);
 var ranNum2 = ranNum * 5;
 
 console.log(ranNum2);
-console.log(Math.floor(ranNum2));
+console.log(Math.floor(ranNum2)); console.log("\n");
+
+
+
+/********** 이미지 슬라이드에 사용하는 % (22.11.22) **********/
+/* a < b라면 a % b = a*/
+let currentIdx = null;
+let slideCount = 5;
+
+setInterval(()=>{
+    // 4. 0~4 사이이 값 반복
+    let nextIdx = (currentIdx + 1) % slideCount; // 1, 2, 3, 4, 0
+    
+    currentIdx = nextIdx;
+
+    console.log(nextIdx);
+}, 3000);
+
